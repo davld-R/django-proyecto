@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style1.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style2.css' %}"
+    />
+    <!-- Link del Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Este Código es la barra de navegación -->
+    <header class="main-head">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 pb-3">
+        {% if request.user.is_authenticated %}
+        <div class="container-fluid">
+          <a class="navbar-brand">Bienvenido/a {{ user.username }}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'feed' %}"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'method' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'train' %}">Capacitación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'step1' %}">Paso a paso M</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'encryption8' %}"
+                  >Heramientas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% else %} {% endif %}
+      </nav>
+    </header>
+
+    <!-- Programación del Body -->
+
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 mt-4">Método de Desinfección para jigsaw</h1>
+        <h1 class="mt-2">Jigsaw Decrypter</h1>
+        <p class="mt-2 fst-italic fw-semibold fs-5">
+          Herramienta de descifrado de ransomware
+        </p>
+        <h1>Cómo descifrar y eliminar Jigsaw Ransomware</h1>
+        <div class="">
+          <p class="mt-4 fst-italic fw-semibold fs-5">
+            Para descifrar sus archivos, lo primero que debe hacer es finalizar
+            los procesos firefox.exe y drpbx.exe en el Administrador de tareas
+            para evitar que se eliminen más archivos. Luego debe ejecutar
+            MSConfig y deshabilitar la entrada de inicio llamada firefox.exe que
+            apunta al ejecutable %UserProfile%\AppData\Roaming\Frfx\firefox.exe.
+          </p>
+        </div>
+        <div class="border border-success col-6 mx-auto p-4 mt-4">
+          <p class="">
+            Una vez que haya finalizado el ransomware y deshabilitado su inicio,
+            procedamos a descifrar los archivos. El primer paso es descargar y
+            extraer Jigsaw Decryptor desde el siguiente boton
+          </p>
+          <a
+            href="https://www.bleepingcomputer.com/download/jigsaw-decrypter/"
+            role="button"
+            class="btn btn-success"
+            >Descargar</a
+          >
+        </div>
+        <p class="mt-4 fst-italic fw-semibold fs-5">
+          Luego haga doble clic en el archivo JigSawDecrypter.exe para iniciar
+          el programa. Cuando se inicie el programa, aparecerá una pantalla
+          similar a la siguiente.
+        </p>
+        <div class="p-3">
+          <img src="/media/paso2/jigsaw1.webp" alt="" class="img-fluid" />
+        </div>
+        <p class="mt-4 fst-italic fw-semibold fs-5">
+          Luego haga doble clic en el archivo JigSawDecrypter.exe para iniciar
+          el programa. Cuando se inicie el programa, aparecerá una pantalla
+          similar a la siguiente.
+        </p>
+        <div class="p-3">
+          <img src="/media/paso2/jigsaw2.webp" alt="" class="img-fluid" />
+        </div>
+        <p class="mt-4 fst-italic fw-semibold fs-5">
+          Para descifrar sus archivos, simplemente seleccione el directorio y
+          haga clic en el botón Descifrar mis archivos. Si desea descifrar todo
+          el disco, puede seleccionar el disco C: en sí. Se recomienda que no
+          marque la opción Eliminar archivos cifrados hasta que haya confirmado
+          que la herramienta puede descifrar correctamente sus archivos. Cuando
+          haya terminado de descifrar sus archivos, la pantalla aparecerá como
+          se muestra a continuación.
+        </p>
+        <div class="p-3">
+          <img src="/media/paso2/jigsaw3.webp" alt="" class="img-fluid" />
+        </div>
+        <p class="fst-italic fw-semibold fs-5 mb-5 mt-4">
+          Ahora que sus archivos están descifrados, se sugiere ejecutar un
+          programa antivirus o antimalware para escanear su computadora en busca
+          de infecciones.
+        </p>
+      </div>
+    </div>
+    <div class="container mt-3 mb-4">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="d-grid gap-2 col-3 mx-auto text-center">
+            <a
+              class="btn btn-secondary btn-lg"
+              role="button"
+              href="{% url 'encryption8' %}"
+              >Volver</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link del Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

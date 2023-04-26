@@ -1,0 +1,333 @@
+{% extends 'azul/index.html' %} {% block content %} {% if request.user.is_authenticated %}
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style1.css' %}"
+    />
+    <!--*** Link del Bootstrap ***-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <!--INICIO-->
+    <!--Portada de inicio-->
+
+    <div class="container__aboutT div__offset">
+      <div class="aboutT">
+        <div class="text__aboutT">
+          <h1>METODOLOGÍA PARA HACER FRENTE A UN ATAQUE RANSOMWARE</h1>
+          <p>
+            Página web dirigida a empresas con el fin de capacitar y dar
+            solucion a infecciónes ransomare
+          </p>
+          <a href="{% url 'method' %}" class="btn__text-about btn__text"
+            >Conoce Nuestra Metodología</a
+          >
+        </div>
+        <div class="image__aboutT">
+          <img src="/media/feed/ma.png" alt="" width="300px" height="200px" />
+        </div>
+      </div>
+    </div>
+
+    <!--construccion Capacitacion banner-->
+
+    <div class="container__trust container__card-primary">
+      <div class="trust card__primary">
+        <div class="text__trust text__card-primary">
+          <p>CAPACITACIÓN DIRIGIDA A EMPRESAS</p>
+          <h1>Capacítate en temas como</h1>
+        </div>
+        <div class="container__trust container__box-card-primary">
+          <div class="card__trust box__card-primary">
+            <img
+              src="/media/feed/busqueda.webp"
+              alt=""
+              width="100"
+              height="100"
+            />
+            <h2>PHISHING</h2>
+            <a href="{% url 'train' %}" class="btn__text-cover btn__text"
+              >Consultar</a
+            >
+          </div>
+          <div class="card__trust box__card-primary">
+            <img
+              src="/media/feed/redes-sociales.webp"
+              alt=""
+              width="100"
+              height="100"
+            />
+            <h2>FRAUDE</h2>
+            <a href="{% url 'train' %}" class="btn__text-cover btn__text"
+              >Consultar</a
+            >
+          </div>
+          <div class="card__trust box__card-primary">
+            <img
+              src="/media/feed/blindaje.webp "
+              alt=""
+              width="100"
+              height="100"
+            />
+            <h2>RANSOMWARE</h2>
+            <a href="{% url 'train' %}" class="btn__text-cover btn__text"
+              >Consultar</a
+            >
+          </div>
+          <div class="card__trust box__card-primary">
+            <img
+              src="/media/feed/bote-de-basura (1).webp"
+              alt=""
+              width="100"
+              height="100"
+            />
+            <h2>DUMPSTER</h2>
+            <a href="{% url 'train' %}" class="btn__text-cover btn__text"
+              >Consultar</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--construccion Metodologia banner-->
+
+    <div class="container__about div__offset">
+      <div class="about">
+        <div class="text__about">
+          <h1>Conoce El Paso A Paso de Nuestra Metodología</h1>
+          <p>Descubre de forma fácil el como resolver un ataque ransomware</p>
+          <a href="{% url 'step1' %}" class="btn__text-about btn__text">Ir</a>
+        </div>
+        <div class="image__about">
+          <img
+            src="/media/feed/metodologia.gif"
+            alt=""
+            width="300px"
+            height="200px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!--construccion Herramienta banner-->
+
+    <div class="containerHerramienta">
+      <div class="tituloh">
+        <h1>Herramientas Contra Infecciónes Ransomware</h1>
+      </div>
+      <div class="containerH">
+        <div class="card">
+          <img src="/media/feed/R.webp" alt="" />
+          <h4>Herramienta contra RIUK</h4>
+          <a href="{% url 'encryption8'  %}">Leer Más-></a>
+        </div>
+
+        <div class="card">
+          <img src="/media/feed/w.webp" alt="" />
+          <h4>Herramienta Contra WANNACRY</h4>
+          <a href="{% url 'encryption8'  %}">Leer más-></a>
+        </div>
+
+        <div class="card">
+          <img src="/media/feed/B.webp" alt="" />
+          <h4>Herramienta Contra BAD RABBIT</h4>
+          <a href="{% url 'encryption8'  %}">Leer más-></a>
+        </div>
+
+        <div class="card">
+          <img src="/media/feed/J.webp" alt="" />
+          <h4>Herramienta Contra JIGSAW</h4>
+          <a href="{% url 'encryption8'  %}">Leer más-></a>
+        </div>
+
+        <div class="card">
+          <img src="/media/feed/P.webp" alt="" />
+          <h4>Herramienta Contra PETYA</h4>
+          <a href="{% url 'encryption8'  %}">Leer más-></a>
+        </div>
+
+        <div class="btnH">
+          <a href="{% url 'encryption8' %}" class="btn__text-cover btn__text"
+            >Mas Herramientas --></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--SECCION DE VIDEOS O NO SE QUE-->
+
+    <div class="info">
+      <div class="tituloI">
+        <h1>Información multimedia</h1>
+      </div>
+
+      <div class="video1">
+        <dialog id="ms">
+          <video class="prueba1" width="100%" height="500px" controls>
+            <source src="video.mp4" type="video/mp4" />
+          </video>
+          <button id="close" onclick="document.getElementById('ms').close()">
+            Cerrar!
+          </button>
+        </dialog>
+        <p>Saber mas sobre Ciberseguridad</p>
+        <button id="show" onclick="document.getElementById('ms').showModal()">
+          Mostrar
+        </button>
+      </div>
+
+      <div class="video2">
+        <dialog id="ms">
+          <video class="video1" width="700" height="500" controls>
+            <source src="video.mp4" type="video/mp4" />
+          </video>
+          <button id="close" onclick="document.getElementById('ms').close()">
+            Cerrar!
+          </button>
+        </dialog>
+        <p>Que es un ataque DDos??????? ......</p>
+        <button id="show" onclick="document.getElementById('ms').showModal()">
+          Mostrar
+        </button>
+      </div>
+
+      <div class="video3">
+        <dialog id="ms">
+          <video class="video1" width="700" height="500" controls>
+            <source src="https://www.youtube.com/embed/tOFzERkOg1s" type="" />
+          </video>
+          <button id="close" onclick="document.getElementById('ms').close()">
+            Cerrar!
+          </button>
+        </dialog>
+        <p>Historia y evolución del Ransomware</p>
+        <button id="show" onclick="document.getElementById('ms').showModal()">
+          Mostrar
+        </button>
+      </div>
+    </div>
+
+    <!--SECCION FOOTER-->
+
+    <footer>
+      <p>Copyryght © 2023</p>
+    </footer>
+  </main>
+  
+  <!--*** Link del Javascript del Boostrap ***-->
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>
+
+{% else %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <form
+        method="post"
+        class="position-absolute top-50 start-50 translate-middle needs-validation p-5 bg-dark rounded"
+      >
+        {% csrf_token %}
+        <div class="mb-3 text-center">
+          <h1 class="st1">INICIAR SESIÓN</h1>
+        </div>
+        <div class="mb-3">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAshJREFUSEuNl4tVGzEQRe9UAB2EVGBTQewOnA6gAjsVQCqIUwElJB1gV8BSQSgBV6Cc0Wql0W+9Ovizu/J83rx5I4SwBHDThfns3bdbxz32vWGocKS78xU9WZcz7pdEVkepYeqfS+nWlxEJE9MGxyrYG4Czt9PErM5ed44ZN39T3Bwvd8ALcFuY+wQegb9tN3URI9Tz8fqnR4G9N9Hf/AM45uUcIbSgTiaWJL0BXoPBM8IRxwnQTHcCBwffwvMt+GfdlaCOW7qpDAgrHO/AOlnMsvkAvgADyH3KsiCN6aJ+xsnDVKQMyiKlZ+Ap2r3Cm5HVsQsL3o+FGWEeA9865NRh7wbhNRC7grtszrqdIncijHcO/oX4vreZ6+nyAE4Zr+sroNB3i1iwul2PQKIb4DdwSMTO0FI274FL1W6NzqyVq8lFOSJuH2EUToVWWNbH4K4xO3/eTFpuwZ0EVkGTtV1UsXw7GaYXrJ9tqS68pVDchfpOUllaPQMPZW17rmeGRDdarbHNUjNXqfSKtXTKLaxxHUSkVZTDJS7TnsJxF/Z1UC5VLf3eamXNXF9aZ/1cIJnNQeRv6hTS3lRo28vMShONQv8o8Nk6XEwl6ZncIbzgdARG6xeQIUs3Ba1o3Jgc2qMybKihHht0DfJmpFR7U8nzkUtshbky/wCyN8HdZ9Anx3XBBAYHK4RLGP5mzM2QKBFtB+5PgFLrrc6z1WK1nTLtadQ/CFjj2na/AkI/AbXrV2Me+/uanQ71d4R1feCaPYGUWY3I+TOZn3JxtTKeiJhF2YJq2jgD/rNDngJXdMjWjsOPlZlv4akZgU0eLDmHaxtOtY4ky6AOpu2U2SKc4iEtaks2CmebW2Dj0lktOxyUUKtgTGeqafp0tcOSpSMUtb1uO7WVqFL/3rY6SlumUquX6PvVvFOrLCDd3H8ShaGZsZ1R9ZrXsPk/ukUGNqlMAisAAAAASUVORK5CYII="
+            /></span>
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="username"
+              placeholder="Usuario"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <!-- <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name="username">
+              <label for="floatingInput">Nombre de usuario</label>
+            </div> -->
+
+          <!-- <label for="validationDefault01" class="form-label estilo1"
+              >Nombre de usuario</label
+            >
+            <input
+              required
+              type="text"
+              class="form-control is-valid"
+              id="validationDefault01"
+              aria-describedby="emailHelp"
+              name="username"
+              placeholder=""
+            /> -->
+        </div>
+        <div class="mb-3">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAnhJREFUSEull+Fx2zAMhT9M0MsEcSdoMkHTDbxB7QmcTGCP4A2SDbqCu4GzgUdQJmCPIkxRIEjprvojmYLwgIcHkBb0EiDcf1R381ZAwoJ9y0BdxVvj6oD1o8z+kllpPD33gd2oV3KzEFwGznb1A8yiTgnV2bS58+xd4JxozfaiDtxEjSaiTYfqMrP6uZ/fsn2dcUlsq06ttFw+fIktZvy/mXnfr6F6AzwCX8C1dlI3tKtNB73OOH25BTlCeDLfXIA9wi2x6vfoWpas3Rk4FD3j+fkFXLw2K43L6tpKR67K+bdDeFeNRHo/EgCR8i3wUx0PAt8DDBNQrbjWilfj6Ohbqqk8QbiZdM8gBx2EbwHOdrbUWRoOdEjkjCWwDcgfHf17kA9/G5AbhEeBa0BeZ9O4PyY/UYY04xzjKcBR43sAGeIWVI/rMaDfdS1b1c3rqotpuNzfnFBggYegwFm9UwSx7jPgNSoGErCyUrZTbKGRaoF9SMLyrlj3SPVngFc12BXBRIB4zdZSaRgK4FlhRnEJDAF5nsSVy3EO91aDNyZxZbZSc4/2J4GjHi6qeWEXYpTv95aJ7SRwCdpOAi/qKLZabLGxnQR2IWUYrxe9m2DmjefN6rPAoRpMc9Kf8whtK7kJrMFOKivOXLHeJwg/zNu/Wjvb30YL/b5SYH/b0ow3EtioKK7lrrd2MzCTMQdoqE7j0+nd4tjWG4Ttc2qJGP1nYNdd/ww7i96D7E3vBNzZ3epCrBwXxqfNwQB3YDp66UvJlG+aXOYzN/uOTYuABT91jRcoap+xOyXwj7fl6iJpaZIv/C+ah+D77Ku6c3y37dH9w1cGqnH8A3PFBTa8OFqqAAAAAElFTkSuQmCC"
+            /></span>
+            <input
+              required
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="Contraseña"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <!-- <label for="exampleInputPassword1" class="form-label estilo1"
+              >Contraseña</label
+            >
+            <input
+              required
+              type="password"
+              class="form-control is-valid"
+              id="exampleInputPassword1"
+              name="password"
+              placeholder=""
+            /> -->
+        </div>
+        <div class="d-grid gap-2 mb-3">
+          <button type="submit" class="btn btn-primary">Ingresar</button>
+        </div>
+        <p class="st1">
+          ¿Ha olvidado su clave? Puede restaurarla
+          <a href="{% url 'password_reset' %}" role="button" class="estilo3"
+            >aqui</a
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endif %} {% endblock %}

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style1.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style2.css' %}"
+    />
+    <!--*** Link del Bootstrap ***-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Herramientas</title>
+  </head>
+  <body class="bodyh">
+    <!--!: Este Código es la barra de navegación -->
+    <header class="main-head">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 pb-3">
+        {% if request.user.is_authenticated %}
+        <div class="container-fluid">
+          <a class="navbar-brand">Bienvenido/a {{ user.username }}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'feed' %}"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'method' %}">Documentación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'train' %}">Capacitación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'step1' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'encryption8' %}"
+                  >Herramientas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% else %} {% endif %}
+      </nav>
+    </header>
+
+    <!--TODO: Programación del Body -->
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <h1 class="display-5 m-4 fw-bold">Herramientas de desencriptado</h1>
+          <p class="pt-1 fst-italic fs-5">
+            "El ransomware es una amenaza real para individuos y empresas de
+            todo el mundo. Es vital que las organizaciones tomen medidas
+            preventivas y cuenten con herramientas de seguridad robustas para
+            protegerse contra este tipo de ataques" <br />
+            <code>- Sundar Pichai, CEO de Google.</code>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="flush-collapseOne"
+                >
+                  <p class="fs-5 fw-bold fst-italic">WannaCry</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  WannaCry es un tipo de malware de cifrado de datos que se
+                  propagó rápidamente en 2017, afectando a miles de sistemas
+                  informáticos en todo el mundo.<br />
+                  Una vez que infecta un sistema, el ransomware cifra los
+                  archivos en el disco duro del usuario y muestra una pantalla
+                  de rescate que exige un pago en Bitcoin a cambio de la clave
+                  de descifrado<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'wanna1' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed btn-outline-success"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  <p class="fs-5 fw-bold fst-italic">Locky</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Locky es un tipo de ransomware que se propagó ampliamente en
+                  2016 y 2017. Al igual que otros tipos de ransomware, Locky
+                  cifra los archivos del usuario y exige el pago de un rescate
+                  en Bitcoin para recuperar el acceso a los archivos. Locky a
+                  menudo se distribuye a través de correos electrónicos de
+                  phishing y archivos adjuntos maliciosos. Una vez que Locky
+                  infecta un sistema, puede cifrar archivos en unidades de red,
+                  discos duros locales y dispositivos extraíbles.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'tools' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="accordion-button collapsed btn-outline-secondary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  <p class="fs-5 fw-bold fst-italic">Bad Rabbit</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Se propagó a través de sitios web comprometidos que instalaban
+                  el malware en el equipo del usuario. Una vez instalado, Bad
+                  Rabbit cifra los archivos del usuario y exige un rescate en
+                  Bitcoin a cambio de la clave de descifrado. Bad Rabbit se
+                  enfocó en objetivos en Europa del Este, especialmente en Rusia
+                  y Ucrania, aunque también afectó a algunas empresas en otros
+                  lugares. Se cree que Bad Rabbit se originó a partir de código
+                  malicioso utilizado en ataques anteriores, como NotPetya y
+                  WannaCry.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'badRabbit' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button
+                  class="accordion-button collapsed btn-outline-danger"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  <p class="fs-5 fw-bold fst-italic">Ryuk</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Ryuk es un tipo de ransomware que se descubrió por primera vez
+                  en 2018. Se cree que los atacantes detrás de Ryuk se han
+                  enfocado en objetivos específicos y han utilizado técnicas
+                  avanzadas de ataque para comprometer los sistemas de las
+                  víctimas. Una vez que Ryuk infecta un sistema, cifra los
+                  archivos del usuario y exige un rescate en Bitcoin a cambio de
+                  la clave de descifrado. Se sabe que Ryuk ha afectado a
+                  empresas y organizaciones en todo el mundo, y se cree que los
+                  atacantes detrás de Ryuk tienen vínculos con grupos de hackers
+                  respaldados por el estado.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'ryuk' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button
+                  class="accordion-button collapsed btn-outline-warning"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                >
+                  <p class="fs-5 fw-bold fst-italic">Shade / Troldesh</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Shade, también conocido como Troldesh, es un tipo de
+                  ransomware que se descubrió por primera vez en 2014. El
+                  malware se propaga a través de correos electrónicos de
+                  phishing y sitios web comprometidos, y una vez que infecta un
+                  sistema, cifra los archivos del usuario y exige un rescate en
+                  Bitcoin para recuperar los archivos cifrados. Shade se ha
+                  utilizado para atacar a usuarios en todo el mundo, y se sabe
+                  que los atacantes detrás de Shade han utilizado técnicas
+                  avanzadas para evadir la detección y propagarse a través de
+                  redes de sistemas. A pesar de que se ha interrumpido la
+                  actividad de Shade en 2019, se recomienda mantenerse alerta a
+                  posibles nuevos ataques.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'shadeT' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingsix">
+                <button
+                  class="accordion-button collapsed btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapsesix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapsesix"
+                >
+                  <p class="fs-5 fw-bold fst-italic">Jigsaw</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapsesix"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingsix"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Jigsaw es un tipo de ransomware que se descubrió en 2016. El
+                  malware recibe su nombre del personaje ficticio de la serie de
+                  películas Saw. Jigsaw utiliza técnicas de cifrado para
+                  bloquear el acceso del usuario a los archivos del sistema y
+                  exige un rescate en Bitcoin para descifrar los archivos.
+                  Además, Jigsaw utiliza tácticas de intimidación para presionar
+                  a las víctimas a pagar el rescate, como borrar archivos de
+                  manera incremental o amenazar con borrar más archivos si el
+                  rescate no se paga a tiempo. Jigsaw también tiene la capacidad
+                  de propagarse a través de redes y dispositivos conectados, lo
+                  que lo hace especialmente peligroso. Aunque se han logrado
+                  algunos éxitos en la lucha contra Jigsaw, sigue siendo una
+                  amenaza para los usuarios de Internet en todo el mundo.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'jigsaw' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSeven">
+                <button
+                  class="accordion-button collapsed btn btn-outline-success"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSeven"
+                >
+                  <p class="fs-5 fw-bold fst-italic">Cryptolocker</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSeven"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingSeven"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  CryptoLocker es un tipo de ransomware que apareció por primera
+                  vez en septiembre de 2013. Este malware se propaga a través de
+                  correos electrónicos de phishing y descargas maliciosas. Una
+                  vez que se infecta un sistema, CryptoLocker utiliza técnicas
+                  de cifrado para bloquear el acceso del usuario a sus archivos
+                  y luego exige un rescate en Bitcoin para descifrarlos. A
+                  diferencia de algunos otros tipos de ransomware, CryptoLocker
+                  utiliza un cifrado avanzado y es muy difícil de desencriptar
+                  sin la clave de cifrado correcta. CryptoLocker ha sido
+                  responsable de múltiples ataques cibernéticos importantes en
+                  todo el mundo y ha afectado tanto a usuarios individuales como
+                  a empresas. Aunque algunos esfuerzos han sido exitosos en la
+                  lucha contra CryptoLocker, sigue siendo una amenaza
+                  significativa para la seguridad en línea.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'cryptolocker' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingEight">
+                <button
+                  class="accordion-button collapsed btn btn-outline-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEight"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseEight"
+                >
+                  <p class="fs-5 fw-bold fst-italic">Petya</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseEight"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingEight"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Petya es un tipo de ransomware que apareció por primera vez en
+                  2016. Este malware se propaga principalmente a través de
+                  correos electrónicos de phishing y sitios web maliciosos. Una
+                  vez que infecta un sistema, Petya utiliza técnicas de cifrado
+                  para bloquear el acceso del usuario a sus archivos y luego
+                  exige un rescate en Bitcoin para descifrarlos. Sin embargo, a
+                  diferencia de otros tipos de ransomware, Petya también tiene
+                  la capacidad de propagarse a través de redes y sistemas
+                  conectados, lo que lo hace especialmente peligroso. Petya ha
+                  sido responsable de varios ataques cibernéticos importantes en
+                  todo el mundo, incluido el ataque masivo de Petya en 2017 que
+                  afectó a empresas y organizaciones en todo el mundo. Aunque se
+                  han logrado algunos éxitos en la lucha contra Petya, sigue
+                  siendo una amenaza significativa para la seguridad en
+                  línea.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'petya' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingNine">
+                <button
+                  class="accordion-button collapsed btn-outline-danger"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseNine"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseNine"
+                >
+                  <p class="fs-5 fw-bold fst-italic">GandCrab 5</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseNine"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingNine"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  GandCrab 5 es una variante de ransomware que se descubrió por
+                  primera vez en enero de 2018. Se propaga a través de correos
+                  electrónicos de phishing, descargas de software malicioso y
+                  vulnerabilidades de software. Una vez que infecta un sistema,
+                  GandCrab 5 utiliza técnicas de cifrado para bloquear los
+                  archivos del usuario y luego exige un rescate en Bitcoin o
+                  Dash para descifrarlos. Lo que hace que GandCrab 5 sea
+                  particularmente peligroso es su capacidad para evadir la
+                  detección de software antivirus y su habilidad para mutar y
+                  actualizar constantemente, lo que dificulta su detección y
+                  eliminación. A lo largo de su existencia, GandCrab 5 ha sido
+                  responsable de múltiples ataques cibernéticos a nivel mundial
+                  y ha afectado a individuos, empresas y organizaciones de todos
+                  los tamaños y sectores. A pesar de los esfuerzos de los
+                  expertos en seguridad cibernética, GandCrab 5 ha demostrado
+                  ser un ransomware persistente y en constante evolución.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'gandCrab' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTen">
+                <button
+                  class="accordion-button collapsed btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTen"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTen"
+                >
+                  <p class="fs-5 fw-bold fst-italic">GoldenEye 5</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTen"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTen"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  GoldenEye se cree que se originó en Rusia. Es un tipo de
+                  ransomware que se propaga a través de correos electrónicos de
+                  phishing y descargas de software malicioso. Una vez que
+                  infecta un sistema, GoldenEye utiliza técnicas de cifrado para
+                  bloquear los archivos del usuario y luego exige un rescate en
+                  Bitcoin para descifrarlos. A diferencia de otros tipos de
+                  ransomware, GoldenEye está diseñado para atacar a empresas y
+                  organizaciones, en lugar de individuos, y tiene como objetivo
+                  bloquear completamente el acceso de la empresa a sus sistemas
+                  y datos.<br />
+                  <div class="d-grid gap-2 d-md-block mt-2">
+                    <a
+                      class="btn btn-primary"
+                      role="button"
+                      href="{% url 'goldenEye' %}"
+                      >Herramienta
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="pt-2 fst-italic fs-3 text-center m-3 page">
+      Mas utilidades disponibles aquí
+    </p>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/media/img/herramientas/page1.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <a
+                href="https://www.nomoreransom.org/es/decryption-tools.html"
+                class="card-title page1 fw-bold fst-italic"
+              >
+                Herramientas de descifrado
+              </a>
+              <p class="card-text mt-2">
+                El portal No More Ransom es una iniciativa del National High
+                Tech Crime Unit de la policía de Países Bajos, el European
+                Cybercrime Centre de Europol, Kaspersky e McAfee con el objetivo
+                de ayudar a las víctimas de ransomware a recuperar sus datos
+                cifrados sin tener que pagar a los criminales.<code
+                  ><br />- No More Ransom</code
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"
+                >Última actualización 25 de feb 2023</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/media/img/herramientas/page2.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <a
+                href="https://id-ransomware.malwarehunterteam.com/"
+                class="card-title page2 fw-bold fst-italic"
+              >
+                Identificar el tipo de ransomware que te está afectando
+              </a>
+              <p class="card-text mt-2">
+                Este servicio es estrictamente para la identificación de que
+                ransomware puede haber cifrado sus archivos. Se tratará de
+                apuntar en la dirección correcta que le permita saber si hay una
+                forma conocida de descifrar los archivos.
+                <code><br />- Emisoft</code>
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"
+                >Última actualización 24 de feb 2023</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/media/img/herramientas/page3.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <a
+                href="https://www.bitdefender.com/blog/labs/bitdefender-partnership-with-law-enforcement-yields-megacortex-decryptor/"
+                class="card-title page3 fw-bold fst-italic"
+              >
+                Bitdefender publica un descifrador para MegaCortex
+              </a>
+              <p class="card-text position-right mt-2">
+                Este descifrador se ha creado en colaboración con Europol, el
+                proyecto NoMoreRansom, la Fiscalía de Zúrich y la Policía
+                Cantonal de Zúrich.
+              </p>
+              <p><code>- Bitdefender</code></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"
+                >Última actualización 5 de Enero del 2023</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50" style="margin-top: 90px">
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="{% url 'step1' %}" class="navbar-brand">
+            <h1 class="text-primary">
+              <span class="text-white">METODO</span>LOGÍA
+            </h1>
+          </a>
+          <p>
+            Metodología creada para capacitar a empresas para hacerle frente a
+            infecciones ransomware
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Nuestros Servicios
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white-50 mb-2" href="{% url 'feed' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Inicio</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'method' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Documentación</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'train' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Capacitacion</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'step1' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Metodología</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'encryption8' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Herramientas</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            links funcionales
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a
+              class="text-white-50 mb-2"
+              href="https://id-ransomware.malwarehunterteam.com/"
+              ><i class="fa fa-angle-right mr-2"></i>ID Ransomware</a
+            >
+            <a
+              class="text-white-50 mb-2"
+              href="https://latam.kaspersky.com/home-security?reseller=es-LA_bb2023_pro_ona_sem_bra_onl_b2c_goo_ppc-ad_______&utm_content=bb2023|generic&utm_id=bi_cmp-298177336_adg-1294125578123615_ad-80882956982290_kwd-80883071480946:loc-43_dev-c_ext-_prd-_sig-3ecd079b75db1311a69063bc2306550b&utm_source=google&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-%20SP%20-%20B-EXA-KW&msclkid=3ecd079b75db1311a69063bc2306550b&utm_source=bing&utm_medium=cpc&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-
+            %20SP%20-%20B-EXA-KW&utm_term=kaspersky&utm_content=kaspersky"
+              ><i class="fa fa-angle-right mr-2"></i>kaspersky</a
+            >
+            <a class="text-white-50 mb-2" href="https://www.emsisoft.com/en/"
+              ><i class="fa fa-angle-right mr-2"></i>emsisoft</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Contactanos
+          </h5>
+          <p><i class="fa fa-map-marker-alt mr-2"></i>Pasto, Colombia</p>
+          <p><i class="fa fa-phone-alt mr-2"></i>+57 311 340 2393</p>
+          <p><i class="fa fa-envelope mr-2"></i>freurbano@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+      style="border-color: rgba(256, 256, 256, 0.1) !important"
+    >
+      <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0"></div>
+        <div class="col-lg-6 text-center text-md-right"></div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Link del Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

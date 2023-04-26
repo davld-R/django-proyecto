@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link del Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--! Este Código es la barra de navegación -->
+    <header class="main-head">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 pb-3">
+        {% if request.user.is_authenticated %}
+        <div class="container-fluid">
+          <a class="navbar-brand">Bienvenido/a {{ user.username }}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'feed' %}"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'method' %}">Documentación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'train' %}"
+                  >Capacitación</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'step1' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'encryption8' %}"
+                  >Herramientas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% else %} {% endif %}
+      </nav>
+    </header>
+    <!--! programación del body  -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">DUMPSTER</span> DIVING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+      <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="w-100 p-5"
+              style="max-height: 900px"
+              src="/media/feed/D1.webp"
+              alt="Image"
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 900px">
+                <h4 class="text-white text-uppercase mb-md-3">
+                  TODO LO NECESARIO SOBRE
+                </h4>
+                <h1 class="display-3 text-white mb-md-4">DUMPSTER DIVING</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="w-100 p-5"
+              style="max-height: 900px"
+              src="/media/feed/D2.webp"
+              alt="Image"
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 900px">
+                <h4 class="text-white text-uppercase mb-md-3">
+                  TODO LO NECESARIO SOBRE
+                </h4>
+                <h1 class="display-3 text-white mb-md-4">RANSOMWARE</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#header-carousel"
+          data-slide="prev"
+        >
+          <div class="btn btn-dark" style="width: 45px; height: 45px">
+            <span class="carousel-control-prev-icon mb-n2"></span>
+          </div>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#header-carousel"
+          data-slide="next"
+        >
+          <div class="btn btn-dark" style="width: 45px; height: 45px">
+            <span class="carousel-control-next-icon mb-n2"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">QUE ES EL</span> DUMPSTER DIVING?
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Booking Start -->
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/que.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Que es el dumpster diving?
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                En ciberseguridad, el término inglés dumpster
+                                diving consiste en investigar la «basura» de una
+                                persona u organización para encontrar
+                                información que pueda ser utilizada para atacar
+                                una red informática.
+                                <br />
+                                En muchas ocasiones, el dumpster diving trata de
+                                obtener datos sobre un usuario para hacerse
+                                pasar por él y acceder a sus perfiles u otras
+                                áreas restringidas de Internet o red local.
+                                Aunque también tiene un componente físico, ya
+                                que esos datos se pueden buscar en la basura
+                                tradicional.
+                                <br />
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?').close()"
+                    >
+                      Cerrar
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Encontrar información relevante sobre que es el dumpster
+                    diving
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Booking End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light booking navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">MOTIVACIONES PARA USAR</span>
+              DUMPSTER DIVING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!--AQUI EMPIEZA EL CODIGO NUEVO-->
+
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?1" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/D3.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Motivaciones para usar dumpster diving
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                Los motivos que pueden dar lugar a que un
+                                ciberatacante realice este tipo de ciberdelito
+                                son principalmente monetarios. Aunque existen
+                                otras razones, como puede ser el espionaje
+                                corporativo y propósitos de inteligencia de
+                                negocios, por venganza o por la simple
+                                mentalidad de encontrar identidad u objetos de
+                                valor para venderlos en la darknet.
+                                <br />
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?1').close()"
+                    >
+                      Cerrar
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Consulta que motiva el uso del dumpster diving
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?1').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--aqui termina el codigo nuevo-->
+
+    <!-- INICIO EVITAR ATAQUES -->
+
+    <!--AQUI EMPIEZA EL CODIGO NUEVO-->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light booking navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">QUE BUSCAN EN NUESTRA</span> BASURA
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?2" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/D4.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                QUE BUSCAN USANDO DUMPSTER DIVING
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                Los ciberdelincuentes del Dumpster Diving buscan
+                                documentos y toda información sensible que se
+                                haya podido tirar a la basura por descuido; como
+                                números de tarjetas de crédito, contactos,
+                                anotaciones con credenciales, etc. Por otro
+                                lado, también buscan dispositivos electrónicos
+                                desechados para sacar la información que no haya
+                                sido borrada correctamente.
+                                <br />
+                                Dale click en información para conocer lo que
+                                mas buscan
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?2').close()"
+                    >
+                      Cerrar
+                    </button>
+                    <button
+                      class="btn btn-primary mx-2"
+                      id="show"
+                      onclick="document.getElementById('mas2').showModal()"
+                    >
+                      INFORMACIÓN
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+                  <dialog id="mas2" class="p-5">
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark">
+                        --> Direcciones de correo electrónico.</span
+                      >
+                    </h6>
+                    <br />
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark">
+                        --> Números telefónicos para realizar vishing.</span
+                      >
+                    </h6>
+                    <br />
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark">
+                        --> Contraseñas y números de cuentas nuestros y de
+                        clientes comerciales.
+                      </span>
+                    </h6>
+                    <br />
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark">
+                        --> Estados de cuenta o estados financieros nuestros.
+                      </span>
+                    </h6>
+                    <br />
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark"> --> Registros médicos. </span>
+                    </h6>
+                    <br />
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark">
+                        --> Credenciales de inicio de sesión de cuenta.
+                      </span>
+                    </h6>
+                    <br />
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark">
+                        --> Información de la base de empleados.
+                      </span>
+                    </h6>
+                    <br />
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark">
+                        --> Información sobre el software y tecnologías que se
+                        utilizan en la empresa.
+                      </span>
+                    </h6>
+                    <br />
+                    <h6 class="text-center text-primary">
+                      <span class="text-dark">
+                        --> Dispositivos de almacenamiento portátiles
+                        desechados.
+                      </span>
+                    </h6>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark">
+                        Una vez recolectada la información de nuestra basura
+                        comenzará la fase de ingeniería social. Es decir, se
+                        engaña a los usuarios en línea para revelar datos
+                        privados sobre ellos.
+                      </span>
+                    </h4>
+                    <br />
+                    <button
+                      class="btn btn-primary"
+                      id="close"
+                      onclick="document.getElementById('mas2').close()"
+                    >
+                      Volver
+                    </button>
+                  </dialog>
+
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Consulta las diferentes etapas que tiene un ransomware
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?2').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--aqui termina el codigo nuevo-->
+
+    <!--inicio de nuevo código-->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light booking navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">COMO PROTEGERSE DEL</span> DUMPSTER DIVING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?6" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/D5.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                COMO PROTEGERTE DEL DUMPSTER DIVING
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                El primer paso siempre es la capacitación,
+                                conocer la existencia de la técnica delictiva
+                                Dumpster Diving y las buenas prácticas
+                                individuales para evitar que se concrete el
+                                ataque. El cifrado es una herramienta disponible
+                                y es fácil de usar. Es recomendable cifrar los
+                                datos confidenciales donde sea que residan; ya
+                                sea que estén en reposo en un disco duro o que
+                                se transmitan a través de una red pública o
+                                privada.
+                                <br />
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?6').close()"
+                    >
+                      Cerrar
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <h4 class="w-100">
+                    Consulta como protegerte contra dumpster diving
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?6').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--aqui termina el codigo nuevo-->
+
+    <!--AQUI EMPIEZA EL CODIGO NUEVO-->
+
+    <!--termina evitar ataques-->>
+
+    <!--SECCION FOOTER-->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50">
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="{% url 'step1' %}" class="navbar-brand">
+            <h1 class="text-primary">
+              <span class="text-white">METODO</span>LOGÍA
+            </h1>
+          </a>
+          <p>
+            Metodología creada para capacitar a empresas para hacerle frente a
+            infecciones ransomware
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Nuestros Servicios
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white-50 mb-2" href="{% url 'feed' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Inicio</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'method' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Documentación</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'train' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Capacitacion</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'step1' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Metodología</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'encryption8' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Herramientas</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            links funcionales
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a
+              class="text-white-50 mb-2"
+              href="https://id-ransomware.malwarehunterteam.com/"
+              ><i class="fa fa-angle-right mr-2"></i>ID Ransomware</a
+            >
+            <a
+              class="text-white-50 mb-2"
+              href="https://latam.kaspersky.com/home-security?reseller=es-LA_bb2023_pro_ona_sem_bra_onl_b2c_goo_ppc-ad_______&utm_content=bb2023|generic&utm_id=bi_cmp-298177336_adg-1294125578123615_ad-80882956982290_kwd-80883071480946:loc-43_dev-c_ext-_prd-_sig-3ecd079b75db1311a69063bc2306550b&utm_source=google&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-%20SP%20-%20B-EXA-KW&msclkid=3ecd079b75db1311a69063bc2306550b&utm_source=bing&utm_medium=cpc&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-
+       %20SP%20-%20B-EXA-KW&utm_term=kaspersky&utm_content=kaspersky"
+              ><i class="fa fa-angle-right mr-2"></i>kaspersky</a
+            >
+            <a class="text-white-50 mb-2" href="https://www.emsisoft.com/en/"
+              ><i class="fa fa-angle-right mr-2"></i>emsisoft</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Contactanos
+          </h5>
+          <p><i class="fa fa-map-marker-alt mr-2"></i>Pasto, Colombia</p>
+          <p><i class="fa fa-phone-alt mr-2"></i>+57 311 340 2393</p>
+          <p><i class="fa fa-envelope mr-2"></i>freurbano@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+      style="border-color: rgba(256, 256, 256, 0.1) !important"
+    >
+      <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0"></div>
+        <div class="col-lg-6 text-center text-md-right"></div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Link del Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

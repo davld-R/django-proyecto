@@ -1,0 +1,798 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style2.css' %}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>PC</title>
+  </head>
+  <body class="body1">
+    <a href="{% url 'step1' %}" class="btn" id="botonSalirTodo">X</a>
+    <div class="container" id="container">
+      <div class="center">
+        <!--! Imagen 1 -->
+        <div class="main1" id="main1">
+          <div class="power">
+            <svg
+              onclick="showImage1()"
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="200"
+              height="200"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M12 13q-.425 0-.712-.288Q11 12.425 11 12V4q0-.425.288-.713Q11.575 3 12 3t.713.287Q13 3.575 13 4v8q0 .425-.287.712Q12.425 13 12 13Zm0 8q-1.875 0-3.512-.712q-1.638-.713-2.85-1.926q-1.213-1.212-1.926-2.85Q3 13.875 3 12q0-1.725.625-3.3q.625-1.575 1.8-2.85q.275-.3.7-.3q.425 0 .725.3q.275.275.25.687q-.025.413-.3.738q-.875.975-1.337 2.187Q5 10.675 5 12q0 2.925 2.038 4.962Q9.075 19 12 19t4.962-2.038Q19 14.925 19 12q0-1.325-.475-2.562q-.475-1.238-1.35-2.213q-.275-.3-.287-.7q-.013-.4.262-.675q.3-.3.725-.3t.7.3q1.175 1.275 1.8 2.85Q21 10.275 21 12q0 1.875-.712 3.512q-.713 1.638-1.925 2.85q-1.213 1.213-2.85 1.926Q13.875 21 12 21Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <!--! Imagen 2 -->
+        <div class="main2" id="main2">
+          <img src="/media/img/2.png" alt="" class="img-2" />
+          <img
+            src="/media/img/spinner.gif"
+            alt=""
+            class="spinner1"
+            onclick="showImage2()"
+          />
+        </div>
+        <!--! Imagen 3 -->
+        <div class="main3" id="main3">
+          <img src="/media/img/3.png" alt="" class="img-3" />
+          <img src="/media/img/4.png" alt="" class="img-4" />
+          <img
+            src="/media/img/spinner.gif"
+            alt=""
+            class="spinner2"
+            onclick="showImage3()"
+          />
+          <img src="/media/img/5.png" alt="" class="img-5" />
+        </div>
+        <!--! Imagen 4 -->
+        <div class="main4" id="main4">
+          <!-- Contenedor de toasks -->
+          <div class="contTarea5" id="contTarea5">
+            <div class="contTarea5Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#000000"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Apagar y encender</p>
+              <button class="tarea1Boton" id="tarea5Boton">x</button>
+            </div>
+          </div>
+          <div class="contTarea4" id="contTarea4">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#A7A9AC"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Papelera</p>
+              <button class="tarea1Boton" id="tarea1Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">Esta es la papelera de windows</p>
+          </div>
+          <div class="contTarea1" id="contTarea1">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#007aff"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Unicesmag.png</p>
+              <button class="tarea1Boton" id="tarea2Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">Esto es una imagen</p>
+          </div>
+          <div class="contTarea2" id="contTarea2">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#FF7F2A"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Texto.txt</p>
+              <button class="tarea1Boton" id="tarea3Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">Esto es un documento en blanco</p>
+          </div>
+          <div class="contTarea3" id="contTarea3">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#5BA189"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Ejecutable del Ransomware Jigsaw</p>
+              <button class="tarea1Boton" id="tarea4Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">Dale click para empezar</p>
+          </div>
+          <!-- video 1 -->
+          <div id="contenedorVideo2">
+            <iframe
+              id="miVideo2"
+              width="500"
+              height="500"
+              src=""
+              title='"Cuerdas", Cortometraje completo'
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <button id="cerrardiv">cerrar</button>
+          <!--** contenedor de escritorio -->
+          <!--TODO: Icono Papelera -->
+          <img
+            src="/media/img/papelera.svg"
+            alt=""
+            class="papelera"
+            id="papelera"
+            onclick="showPapelera()"
+          />
+          <p class="papeleraTXT">Papelera de reciclaje</p>
+          <div class="contenedorPapelera" id="contenedorPapelera">
+            <div class="contenedorPapelera2">
+              <p class="contenedorPapelera3">Papelera de reciclaje</p>
+              <button class="contenedorPapelera4" onclick="ocultarPapelera()">
+                X
+              </button>
+            </div>
+            <div class="contenedorPapelera5">
+              <button class="BotonPapeleraNombre">Nombre</button>
+              <button class="BotonPapeleraUbicacion">Ubicación original</button>
+              <button class="BotonPapeleraFecha">Fecha eliminación</button>
+              <button class="BotonPapeleraTamaño">Tamaño</button>
+            </div>
+            <div class="contenedorPapelera6"></div>
+          </div>
+          <!--TODO: Icono Escudo UniCesmag -->
+          <img
+            src="/media/img/unicesmag.png"
+            alt=""
+            class="escudo"
+            id="escudo"
+            onclick="showImage8()"
+          />
+          <div class="contenedor-escudo2" id="contenedor-escudo2">
+            <button class="boton-escudo" onclick="showImage9()">X</button>
+            <img
+              src="/media/img/unicesmag.png"
+              alt=""
+              class="escudo2"
+              id="escudo2"
+            />
+          </div>
+          <p class="escudoTXT">UniCesmag.png</p>
+          <!--TODO: Icono Texto txt -->
+          <img
+            src="/media/img/txt.png"
+            alt=""
+            class="texto"
+            id="texto"
+            onclick="showImage10()"
+          />
+          <div class="contenedor-texto" id="contenedor-texto">
+            <button class="boton-texto" onclick="showImage11()">X</button>
+            <p class="blockNotas">Texto.txt: Bloc de notas</p>
+            <button class="botonGuardarTxt" onclick="saveText()">
+              Guardar
+            </button>
+            <div
+              id="escribeAqui"
+              contenteditable="true"
+              onclick="borrarTexto()"
+            >
+              Escribe aquí
+            </div>
+          </div>
+          <p class="txtTXT">Texto.txt</p>
+          <!--TODO: Icono Ejecutable Jigsaw -->
+          <img
+            src="/media/img/12.png"
+            alt=""
+            class="img-9"
+            id="img-9"
+            onclick="showImage4()"
+          />
+          <p class="decryptJigsaw">decrypt_Jigsaw.exe</p>
+          <!--TODO: Contenedor de Ejecutable jigsaw -->
+          <div class="contenedor-img-10" id="contenedor-img-10">
+            <img src="/media/img/10.png" alt="" class="img-10" id="img-10" />
+            <div id="contenedor2-img-10" onclick="showImage13()"></div>
+            <div id="contenedor3-img-10" onclick="showImage14()"></div>
+            <div id="salir-img-10" onclick="showImage15()"></div>
+          </div>
+          <!--TODO: Contenedor de Apagar / Reiniciar  -->
+          <div class="contenedor-img-11" id="contenedor-img-11">
+            <img src="/media/img/11.png" alt="" class="" id="img-11" />
+            <div
+              class=""
+              id="cont2-img-11"
+              onclick="window.location.href=`{% url 'step1' %}`"
+            ></div>
+            <div class="" id="cont3-img-11" onclick="showImage7()"></div>
+          </div>
+          <!--TODO: Contenedor de Notificaciones -->
+          <div class="notificaciones" id="notificaciones">
+            <p class="notificacionesTXT">No hay nuevas notificaciones</p>
+          </div>
+          <!--** Contenedor de barra -->
+          <div class="barra">
+            <div class="menuInicio" onclick="showImage5()"></div>
+            <div
+              class="contenedor-img-6"
+              id="contenedor-img-6"
+              onclick="showImage5()"
+            >
+              <img src="/media/img/6.png" alt="" class="img-6" />
+            </div>
+            <img
+              src="/media/img/7.png"
+              alt=""
+              class="img-7"
+              onclick="showImage12()"
+            />
+            <img src="/media/img/8.png" alt="" class="img-8" />
+            <div class="barra-escudo" id="barra-escudo">
+              <img
+                src="/media/img/unicesmag.png"
+                alt=""
+                class="barra-escudo2"
+                id="barra-escudo2"
+                onclick="showImage8()"
+              />
+            </div>
+            <div class="barra-texto" id="barra-texto">
+              <img
+                src="/media/img/txt.png"
+                alt=""
+                class="barra-texto2"
+                id="barra-texto2"
+                onclick="showImage10()"
+              />
+            </div>
+            <div class="fecha"><span id="fecha"></span></div>
+          </div>
+        </div>
+        <!--! imagen 5  -->
+        <div class="main5" id="main5">
+          <!-- video 2 -->
+          <div id="contenedorVideo1">
+            <iframe
+              id="miVideo1"
+              width="500"
+              height="500"
+              src=""
+              title='"Paso 2", Cortometraje completo'
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <button id="cerrarVideo1">cerrar</button>
+          </div>
+          <!-- Video 3 -->
+          <div id="contenedorVideo3">
+            <iframe
+              id="miVideo3"
+              width="500"
+              height="500"
+              src=""
+              title='"Paso 2", Cortometraje completo'
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <button id="cerrarVideo3">cerrar</button>
+          </div>
+          <!-- Toask -->
+          <div class="contTarea10" id="contTarea10">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#0385C6"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Boton de windows</p>
+              <button class="tarea1Boton" id="tarea10Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">Dale click para seguir</p>
+          </div>
+          <svg
+            id="contTareaFlecha10"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="white"
+              d="M9.3 20.275L4.7 15.7q-.15-.15-.213-.325T4.425 15q0-.2.063-.375T4.7 14.3l4.625-4.625q.275-.275.7-.287t.7.287q.3.275.3.7t-.3.725l-2.9 2.9H17V5q0-.425.288-.713T18 4q.425 0 .713.288T19 5v10q0 .425-.288.713T18 16H7.825l2.9 2.875q.275.275.288.688t-.288.712q-.3.3-.712.3t-.713-.3Z"
+            />
+          </svg>
+          <div class="contTarea8" id="contTarea8">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#A7A9AC"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Papelera</p>
+              <button class="tarea1Boton" id="tarea8Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">Esta es la papelera de windows</p>
+          </div>
+          <div class="contTarea6" id="contTarea6">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#0385C6"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Herramienta de desencriptado</p>
+              <button class="tarea1Boton" id="tarea6Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">Dale click para seguir</p>
+          </div>
+          <svg id="contTareaFlecha6" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="white" d="M5 20V8h11.175L12.6 4.4L14 3l6 6l-6 6l-1.4-1.425L16.175 10H7v10H5Z"/></svg>
+          <div class="contTarea7" id="contTarea7">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#F14950"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">UniCesmag.png.fun</p>
+              <button class="tarea1Boton" id="tarea7Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">
+              Se observa la imagen como le cambio la extensión
+            </p>
+          </div>
+          <div class="contTarea9" id="contTarea9">
+            <div class="contTarea1Arriba">
+              <svg
+                class="tarea1Box"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#F14950"
+                  d="M19 3H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2m-9 13V8l5 4"
+                />
+              </svg>
+              <p class="tarea1Parrafo">Texto.txt.fun</p>
+              <button class="tarea1Boton" id="tarea9Boton">x</button>
+            </div>
+            <p class="tarea1Parrafo2">
+              Se observa al documento como le cambio la extensión
+            </p>
+          </div>
+          <!--** Contenedor de escritorio -->
+          <!--TODO: Papelera -->
+          <img
+            src="/media/img/papelera.svg"
+            alt=""
+            class="cifradoPapelera"
+            id="cifradoPapelera"
+          />
+          <p class="cifradoPapeleraTXT">Papelera de reciclaje</p>
+          <div id="contenedorPapeleraCifrado">
+            <div class="contenedorPapelera2">
+              <p class="contenedorPapelera3">Papelera de reciclaje</p>
+              <button class="contenedorPapelera4" id="contenedorPapeleraX">
+                X
+              </button>
+            </div>
+            <div class="contenedorPapelera5">
+              <button class="BotonPapeleraNombre">Nombre</button>
+              <button class="BotonPapeleraUbicacion">Ubicación original</button>
+              <button class="BotonPapeleraFecha">Fecha eliminación</button>
+              <button class="BotonPapeleraTamaño">Tamaño</button>
+            </div>
+            <div class="contenedorPapelera6"></div>
+          </div>
+          <!--TODO: Escudo UniCesmag -->
+          <img src="/media/img/13.png" alt="" class="cifradoEscudo" />
+          <p class="cifradoEscudoTXT">UniCesmag.png.fun</p>
+          <span id="desencriptar"></span>
+          <div class="contenedosUnicesmagPng" id="contenedosUnicesmagPng">
+            <button class="botonUnicesmagPngSalir" onclick="ocultarUnicesmag()">
+              X
+            </button>
+            <img
+              src="/media/img/unicesmag.png"
+              alt=""
+              class="escudoUnicesmag"
+              id="escudo2"
+            />
+          </div>
+          <!--TODO: Texto txt -->
+          <img src="/media/img/13.png" alt="" class="cifradoTexto" />
+          <p class="cifradoTextoTXT">Texto.txt.fun</p>
+          <!--TODO: Contenedor de Notificaciones -->
+          <div class="notificaciones2" id="notificaciones2">
+            <p class="notificaciones2TXT">No hay nuevas notificaciones</p>
+          </div>
+          <!--TODO: Herramienta de desencriptado  -->
+          <img
+            src="/media/img/15.png"
+            class="img15"
+            id="img15"
+            alt=""
+            onclick="showImage20()"
+          />
+          <p id="cifradoDecryptJigsaw" class="cifradoDecryptJigsaw">decrypt_Jigsaw.exe</p>
+          <!--** Contenedor de barra -->
+          <div class="barra">
+            <div class="menuInicio2" onclick="showImage17()"></div>
+            <div
+              class="contenedor-img-6"
+              id="contenedor-img-6"
+              onclick="showImage5()"
+            >
+              <img src="/media/img/6.png" alt="" class="img-6" />
+            </div>
+            <img
+              src="/media/img/7.png"
+              alt=""
+              class="img-7"
+              onclick="showImage16()"
+            />
+            <img src="/media/img/8.png" alt="" class="img-8" />
+            <div class="barra-escudo" id="barra-escudo">
+              <img
+                src="/media/img/unicesmag.png"
+                alt=""
+                class="barra-escudo2"
+                id="barra-escudo2"
+                onclick="showImage8()"
+              />
+            </div>
+            <div class="barra-texto" id="barra-texto">
+              <img
+                src="/media/img/txt.png"
+                alt=""
+                class="barra-texto2"
+                id="barra-texto2"
+                onclick="showImage10()"
+              />
+            </div>
+            <div class="fecha2"><span id="fecha2"></span></div>
+          </div>
+          <!--TODO: Contenedor de Ransomware Jigsaw -->
+          <div class="containerSaw" id="containerSaw">
+            <div class="contenedorLetra">
+              <p class="letraSaw" id="letraSaw"></p>
+            </div>
+            <img src="/media/img/saw.webp" alt="" class="imgSaw" />
+            <div class="contenedorTiempo">
+              <span id="timer" class="timer"></span>
+            </div>
+            <div class="contenedorEncriptados">
+              <p class="letraEncriptados">Se eliminará 1 archivo</p>
+            </div>
+            <div class="verEncriptados">
+              <button class="letraVerEncriptados" onclick="showImage18()">
+                Ver Archivos encriptados
+              </button>
+            </div>
+            <div class="contenedorPagar">
+              <p class="letraPagar">
+                Por favor, envíe 150 dólares en Bitcoin aquí:
+              </p>
+            </div>
+            <div class="contenedorClave">
+              <p class="letraClave">13VEVAJUMdJyQ7ttPfBaVNKj2d9ahU1z</p>
+            </div>
+            <div class="contenedorEnviar">
+              <button class="letraEnviar">
+                Hice un pago, ¡ahora devuélveme mis archivos!
+              </button>
+            </div>
+          </div>
+          <!--TODO: Contenedor de archivos encriptados -->
+          <div class="containerEncriptados" id="containerEncriptados">
+            <div class="containerTop">
+              <img class="iconoEncripted" src="/media/img/14.png" alt="" />
+              <p class="textEncripted">EncryptedFiles</p>
+              <svg
+                class="salirEncripted"
+                onclick="showImage19()"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="red"
+                  d="m9 7l2 5l-2 5h2l1-2.5l1 2.5h2l-2-5l2-5h-2l-1 2.5L11 7H9M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"
+                />
+              </svg>
+            </div>
+            <div class="containerArchivos">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Deleted</th>
+                    <th>Path</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="cont-a"></div></td>
+                    <td>C:\Users\Unicesmag\Escritorio\Unicesmag.png</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>C:\Users\Unicesmag\Escritorio\Texto.txt</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>C:\Program Files (*86)\Microsoft.NET</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Contenedor de la herramienta de Desencriptado -->
+          <div class="contenedorEmsisoft" id="contenedorEmsisoft">
+            <div class="contenedorEmsisoft2">
+              <img
+                src="/media/img/15.png"
+                alt=""
+                class="contenedorEmsisoftImg"
+              />
+              <p class="palabra1">Emsisoft Decryptor for Jigsaw</p>
+              <button
+                class="btn-danger contenedorBoton"
+                onclick="cerrarEmsisoft()"
+              >
+                X
+              </button>
+            </div>
+            <div class="contenedorEmsisoft3">
+              <p class="palabra2">
+                <span class="spanPalabra2">EMSI</span>SOFT
+                <span class="span2Palabra2"> Decryptor</span>
+                <span class="span3Palabra2">For Jigsaw - version 1.1.0.0</span>
+              </p>
+            </div>
+            <div class="contenedorEmsisoft4"></div>
+            <div class="contenedorEmsisoft5">
+              <button class="boton1" id="boton1" onclick="BotonDecryptor()">
+                Decryptor
+              </button>
+              <button class="boton2" id="boton2" onclick="BotonResults()">
+                Results
+              </button>
+              <button class="boton3" id="boton3" onclick="BotonOptiones()">
+                Options
+              </button>
+              <button class="boton4" id="boton4" onclick="BotonAbout()">
+                About
+              </button>
+            </div>
+            <!-- Contenedor Decrytor Browse -->
+            <div class="contenedorBuscar1" id="contenedorBuscar1">
+              <div class="contenedorBuscar2">
+                <p class="contenedorBuscarLetra1">Browse For Folder</p>
+                <button
+                  class="btn-danger contenedorBuscarCerrar"
+                  onclick="botonCancel()"
+                >
+                  X
+                </button>
+              </div>
+              <div class="contenedorBuscar3">
+                <p class="contenedorBuscarLetra2">
+                  Please select the folder you want to add:
+                </p>
+                <div class="contenedorBuscar4">
+                  <div class="contenedorComputer">
+                    <img src="/media/img/16.png" alt="" class="img16" />
+                    <p class="contenedorBuscarLetra3">Computer</p>
+                  </div>
+                  <div class="contenedorDisk">
+                    <img
+                      src="/media/img/17.png"
+                      alt=""
+                      class="img17"
+                      onclick="botonFlecha()"
+                    />
+                    <img src="/media/img/18.png" alt="" class="img18" />
+                    <p class="contenedorBuscarLetra4" onclick="botonFlecha()">
+                      Local Disk (C:)
+                    </p>
+                  </div>
+                  <div class="contenedorDesktop" id="contenedorDesktop">
+                    <div class="contenedorImagen" id="contenedorImagen">
+                      <img
+                        src="/media/img/17.png"
+                        alt=""
+                        class="imgImagen"
+                        onclick="botonDesktop2()"
+                      />
+                      <p class="p1" onclick="botonDesktop()">Desktop</p>
+                    </div>
+                    <div class="contenedorImagen2" id="contenedorImagen2">
+                      <img
+                        src="/media/img/17.png"
+                        alt=""
+                        class="imgImagen"
+                        onclick="botonCesmag()"
+                      />
+                      <p class="p2" onclick="botonCesmag()">
+                        UniCesmag.png.fun
+                      </p>
+                    </div>
+                    <div class="contenedorImagen3" id="contenedorImagen3">
+                      <img
+                        src="/media/img/17.png"
+                        alt=""
+                        class="imgImagen"
+                        onclick="botonTexto()"
+                      />
+                      <p class="p2" onclick="botonTexto()">Texto.txt.fun</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contenedorOkCancel">
+                  <button class="botonCancel" onclick="botonCancel()">
+                    Cancel
+                  </button>
+                  <button class="botonOK" onclick="botonOK()">OK</button>
+                </div>
+              </div>
+            </div>
+            <div class="contenedorEmsisoft6" id="contenedorEmsisoft6">
+              <!-- Contenedor Decrytor -->
+              <div class="contenedorEmsisoft7" id="contenedorEmsisoft7">
+                <p class="spanC">
+                  C:/<br /><span id="escribeDesktop"></span>
+                  <span id="escribeCesmag"></span>
+                </p>
+              </div>
+              <!-- Contenedor Results -->
+              <div class="contenedorEmsisoft73" id="contenedorEmsisoft73">
+                <p class="spanC"><span id="spanResults"></span></p>
+              </div>
+              <!-- Contenedor Options -->
+              <div class="contenedorEmsisoft72" id="contenedorEmsisoft72">
+                <div class="containerOptions">
+                  <p class="letra4">General settings</p>
+                  <input type="checkbox" id="checkbox1" checked />
+                  <p class="letra5">Keep encrypted files</p>
+                </div>
+              </div>
+              <!-- Contenedor About -->
+              <div class="contenedorEmsisoft71" id="contenedorEmsisoft71">
+                <p class="lh-1">
+                  <span class="letra1">
+                    Emsisoft Decryptor for Jigsaw v1.1.0.0</span
+                  ><br />
+                  <span class="letra2">
+                    Written by Michael Gillespie - Emsisoft Ltd -
+                    <code>www.emsisoft.com</code>
+                  </span>
+                </p>
+                <p class="lh-1 letra3">
+                  THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+                  KIND, EXPRESS OR IMPLIED. INCLUDING BUT NOT LIMITED TO THE
+                  WARRANTIES OF MECHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+                  AND NONINFRINGEMENT. IN NO EVENT SHALL MICHAEL GILLESPIE OR
+                  EMSISOFT LTD BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+                  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+                  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                </p>
+              </div>
+              <div class="containerBotones">
+                <button class="boton5" id="boton5" onclick="botonAdd()">
+                  Add folder
+                </button>
+                <button class="boton6" id="boton6" onclick="botonClear()">
+                  Clear object(s)
+                </button>
+                <button class="boton7" id="boton7" onclick="botonDecrypt()">
+                  Decrypt
+                </button>
+              </div>
+            </div>
+            <div class="contenedorEmsisoft8">
+              <p class="palabra3">Emsisoft Ltd.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contenedorSoporte"></div>
+    <!-- Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/step.js' %}"></script>
+  </body>
+</html>

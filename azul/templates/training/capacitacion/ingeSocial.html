@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link del Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--! Este Código es la barra de navegación -->
+    <header class="main-head">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 pb-3">
+        {% if request.user.is_authenticated %}
+        <div class="container-fluid">
+          <a class="navbar-brand">Bienvenido/a {{ user.username }}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'feed' %}"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'method' %}">Documentación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'train' %}"
+                  >Capacitación</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'step1' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'encryption8' %}"
+                  >Herramientas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% else %} {% endif %}
+      </nav>
+    </header>
+
+    <!-- Topbar Start -->
+
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">INGENIERÍA</span> SOCIAL
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+      <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="w-100 p-5"
+              style="max-height: 900px"
+              src="/media/feed/social.webp"
+              alt="Image"
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 900px">
+                <h4 class="text-white text-uppercase mb-md-3">
+                  TODO LO NECESARIO SOBRE
+                </h4>
+                <h1 class="display-3 text-white mb-md-4">INGENIERÍA SOCIAL</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="w-100 p-5"
+              style="max-height: 900px"
+              src="/media/feed/social2.webp"
+              alt="Image"
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 900px">
+                <h4 class="text-white text-uppercase mb-md-3">
+                  TODO LO NECESARIO SOBRE
+                </h4>
+                <h1 class="display-3 text-white mb-md-4">INGENIERÍA SOCIAL</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#header-carousel"
+          data-slide="prev"
+        >
+          <div class="btn btn-dark" style="width: 45px; height: 45px">
+            <span class="carousel-control-prev-icon mb-n2"></span>
+          </div>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#header-carousel"
+          data-slide="next"
+        >
+          <div class="btn btn-dark" style="width: 45px; height: 45px">
+            <span class="carousel-control-next-icon mb-n2"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">QUE ES</span> INGENIERÍA SOCIAL?
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Booking Start -->
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/que.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Que es ingeniería Social?
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                Se trata de aprovecharse de las debilidades
+                                humanas. Esta táctica se conoce con el nombre de
+                                «ingeniería social» y consiste en tenderle una
+                                trampa a alguien para que divulgue información o
+                                conceda acceso a redes de datos.
+                                <br />
+                                Por ejemplo, un intruso podría hacerse pasar por
+                                miembro del departamento de informática y
+                                solicitar a los usuarios que le faciliten datos
+                                como sus nombres de usuario y contraseñas.
+                                Sorprende la cantidad de personas que no se lo
+                                piensan dos veces a la hora de poner esa
+                                información en riesgo, sobre todo si parece que
+                                quien la solicita es alguien legítimo.
+                                <br />
+                                Dicho en pocas palabras, la ingeniería social es
+                                el uso del engaño para manipular a personas de
+                                manera que permitan acceder a información y
+                                datos o los divulguen.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?').close()"
+                    >
+                      Cerrar
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Encontrar información relevante sobre Que es Ingeniería
+                    social
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Booking End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light booking navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">TIPOS DE </span> ATAQUES
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!--AQUI EMPIEZA EL CODIGO NUEVO-->
+
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?1" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/TIPO1.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Tipos de Ataques de Ingeniería Social
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                Existen muchos tipos de ataques de este tipo.
+                                <br />
+                                Entendiendo correctamente cómo funciona la
+                                ingeniería social y su modus operandi es fácil
+                                entender estos conceptos dale click en TIPOS
+                                para conocer los mas comunes.
+                                <br />
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?1').close()"
+                    >
+                      Cerrar
+                    </button>
+                    <button
+                      class="btn btn-primary mx-2"
+                      id="show"
+                      onclick="document.getElementById('mas1').showModal()"
+                    >
+                      TIPOS
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+                  <dialog id="mas1" class="p-5">
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Baiting o «anzuelo» </span>
+                      consiste en tender una trampa, como puede ser dejar al
+                      alcance una memoria USB cargada con malware. Si la recoge
+                      alguien que siente curiosidad por saber lo que contiene y
+                      la conecta a su unidad USB, su sistema quedará infectado.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Pretextos </span>
+                      Este ataque utiliza un pretexto para captar la atención y
+                      hacer que la víctima pique el anzuelo y proporcione
+                      información. Por ejemplo, una encuesta en Internet puede
+                      antojarse inofensiva a primera vista y luego solicitar los
+                      datos bancarios.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Vishing y smishing </span>
+                      Variantes del phishing; el «vishing» o «voice fishing»
+                      consiste, simplemente, en llamar por teléfono a alguien y
+                      solicitarle datos.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Quid pro quo </span>
+                      Convencer a las víctimas de que obtendrán algo a cambio de
+                      los datos o el acceso que proporcionan.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Spam a contactos </span>
+                      Consiste en hackear las cuentas de correo electrónico o
+                      redes sociales de una persona para acceder a sus
+                      contactos.
+                    </h4>
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Farming</span>
+                      Implican entablar una relación con la persona objetivo
+                      para extraerle información en el transcurso de un período
+                      más dilatado. 
+                    </h4>
+                    <br />
+                    <button
+                      class="btn btn-primary"
+                      id="close"
+                      onclick="document.getElementById('mas1').close()"
+                    >
+                      Volver
+                    </button>
+                  </dialog>
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Consulta tipos de ataque de ingeniería social
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?1').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--aqui termina el codigo nuevo-->
+
+    <!-- INICIO EVITAR ATAQUES -->
+
+    <!--AQUI EMPIEZA EL CODIGO NUEVO-->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light booking navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">COMO EVITAR </span> ATAQUES?
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?2" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/EVITAR.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Evitar ataques de ingeniería social
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                Los ataques de ingeniería social son
+                                especialmente difíciles de contrarrestar porque
+                                están específicamente diseñados para aprovechar
+                                rasgos humanos como la curiosidad, el respeto
+                                por la autoridad y el deseo de ayudar a un
+                                amigo. Existen, no obstante, una serie de
+                                consejos que pueden ayudarte a detectar estos
+                                ataques de ingeniería social.
+                                <br />
+                                Dale click en CONCEJOS para conocer los mas
+                                útiles.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?2').close()"
+                    >
+                      Cerrar
+                    </button>
+                    <button
+                      class="btn btn-primary mx-2"
+                      id="show"
+                      onclick="document.getElementById('mas2').showModal()"
+                    >
+                      CONCEJOS
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+                  <dialog id="mas2" class="p-5">
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Verifica la fuente: </span>
+                      Verificar la fuente no es tan difícil. Por ejemplo, si se
+                      trata de un mensaje de correo electrónico, mira la
+                      cabecera y contrástala con mensajes válidos del mismo
+                      remitente. Comprueba adónde conducen los enlaces y sobre
+                      toda la ortografía porque, sobre todo los bancos, cuentan
+                      con equipos especializados en el tema y por lo tanto un
+                      correo nunca tendria faltas de ortografía.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> ¿Qué saben?: </span>
+                      ¿A la fuente le faltan datos que pensabas que ya tenía,
+                      como tu nombre completo, etc.? Recuerda: si te llaman del
+                      banco, deberían tener todos esos datos delante y siempre
+                      te formularán preguntas de seguridad antes de permitirte
+                      realizar cambios en tu cuenta. De no ser así, la
+                      posibilidad de que se trate de un correo
+                      electrónico/llamada/mensaje fraudulento es mucho más alta
+                      y más vale que tengas cuidado.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Rompe el bucle: </span>
+                      La ingeniería social suele depender de una cierta
+                      sensación de urgencia. Los atacantes esperan que sus
+                      objetivos no reflexionen demasiado sobre lo que está
+                      sucediendo. Por eso, el mero hecho de tomarte un momento
+                      para pensar puede desalentar estos ataques y demostrar
+                      exactamente lo que son: timos.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Quid pro quo: </span>
+                      Convencer a las víctimas de que obtendrán algo a cambio de
+                      los datos o el acceso que proporcionan.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Solicita identificación: </span>
+                      Verifica el nombre y el número de teléfono de quienquiera
+                      que te llame o te encueste. «¿Para quién trabaja?» debería
+                      ser una respuesta básica a cualquier petición de
+                      información. Si no conoces a la persona que te solicita la
+                      información y no te sientes cómodo proporcionándosela,
+                      dile que necesitas hacer unas comprobaciones y que ya te
+                      pondrás tú en contacto.
+                    </h4>
+                    <br />
+                    <button
+                      class="btn btn-primary"
+                      id="close"
+                      onclick="document.getElementById('mas2').close()"
+                    >
+                      Volver
+                    </button>
+                  </dialog>
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Como evitar ataques de ingeniería social
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?2').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--aqui termina el codigo nuevo-->
+
+    <!--termina evitar ataques-->>
+
+    <!--SECCION FOOTER-->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50">
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="{% url 'step1' %}" class="navbar-brand">
+            <h1 class="text-primary">
+              <span class="text-white">METODO</span>LOGÍA
+            </h1>
+          </a>
+          <p>
+            Metodología creada para capacitar a empresas para hacerle frente a
+            infecciones ransomware
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Nuestros Servicios
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white-50 mb-2" href="{% url 'feed' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Inicio</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'method' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Documentación</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'train' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Capacitacion</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'step1' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Metodología</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'encryption8' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Herramientas</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            links funcionales
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a
+              class="text-white-50 mb-2"
+              href="https://id-ransomware.malwarehunterteam.com/"
+              ><i class="fa fa-angle-right mr-2"></i>ID Ransomware</a
+            >
+            <a
+              class="text-white-50 mb-2"
+              href="https://latam.kaspersky.com/home-security?reseller=es-LA_bb2023_pro_ona_sem_bra_onl_b2c_goo_ppc-ad_______&utm_content=bb2023|generic&utm_id=bi_cmp-298177336_adg-1294125578123615_ad-80882956982290_kwd-80883071480946:loc-43_dev-c_ext-_prd-_sig-3ecd079b75db1311a69063bc2306550b&utm_source=google&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-%20SP%20-%20B-EXA-KW&msclkid=3ecd079b75db1311a69063bc2306550b&utm_source=bing&utm_medium=cpc&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-
+         %20SP%20-%20B-EXA-KW&utm_term=kaspersky&utm_content=kaspersky"
+              ><i class="fa fa-angle-right mr-2"></i>kaspersky</a
+            >
+            <a class="text-white-50 mb-2" href="https://www.emsisoft.com/en/"
+              ><i class="fa fa-angle-right mr-2"></i>emsisoft</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Contactanos
+          </h5>
+          <p><i class="fa fa-map-marker-alt mr-2"></i>Pasto, Colombia</p>
+          <p><i class="fa fa-phone-alt mr-2"></i>+57 311 340 2393</p>
+          <p><i class="fa fa-envelope mr-2"></i>freurbano@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+      style="border-color: rgba(256, 256, 256, 0.1) !important"
+    >
+      <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0"></div>
+        <div class="col-lg-6 text-center text-md-right"></div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- Link del Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

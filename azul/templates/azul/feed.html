@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style1.css' %}"
+    />
+    <!--*** Link del Bootstrap ***-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Inicio</title>
+  </head>
+  <body class="cuerpo">
+    <!--! Este Código es la barra de navegación -->
+
+    <header class="main-head">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 pb-3">
+        {% if request.user.is_authenticated %}
+        <div class="container-fluid">
+          <a class="navbar-brand">Bienvenido/a {{ user.username }}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'feed' %}"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'method' %}">Documentación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'train' %}">Capacitación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'step1' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'encryption8' %}"
+                  >Herramientas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% else %} {% endif %}
+      </nav>
+    </header>
+
+    <!--TODO: Programación del Body -->
+
+    <main>
+      <!--INICIO-->
+      <!--Portada de inicio-->
+
+      <div class="container-fluid container__aboutT div__offset">
+        <div class="aboutT">
+          <div class="text__aboutT text-primary">
+            <h1>METODOLOGÍA PARA HACER FRENTE A UN ATAQUE RANSOMWARE</h1>
+            <p>
+              Página web dirigida a empresas con el fin de capacitar y dar
+              solucion a infecciónes ransomare
+            </p>
+            <a
+              href="{% url 'method' %}"
+              class="container-fluid btn__text-about btn__text btn-primary bg-primary"
+              >Conoce Nuestra Metodología</a
+            >
+          </div>
+          <div class="container image__aboutT">
+            <img src="/media/feed/ma.png" alt="" width="300px" height="200px" />
+          </div>
+        </div>
+      </div>
+
+      <!--construccion Capacitacion banner-->
+
+      <div class="container-fluid container__trust container__card-primary">
+        <div class="container-fluid trust card__primary">
+          <div class="text__trust text__card-primary">
+            <p>CAPACITACIÓN DIRIGIDA A EMPRESAS</p>
+            <h1 class="text-primary">Capacítate en temas como</h1>
+          </div>
+          <div class="container container__trust container__box-card-primary">
+            <div class="card__trust box__card-primary">
+              <img
+                class="img-fluid"
+                src="/media/feed/busqueda.webp"
+                alt=""
+                width="80"
+                height="100"
+              />
+              <h2>PHISHING</h2>
+              <a
+                href="{% url 'phishing' %}"
+                class="btn__text-cover btn__text bg-primary"
+                >Consultar</a
+              >
+            </div>
+            <div class="card__trust box__card-primary">
+              <img
+                class="img-fluid"
+                src="/media/feed/redes-sociales.webp"
+                alt=""
+                width="80"
+                height="100"
+              />
+              <h2>FRAUDE</h2>
+              <a
+                href="{% url 'capacitacion' %}"
+                class="btn__text-cover btn__text bg-primary"
+                >Consultar</a
+              >
+            </div>
+            <div class="card__trust box__card-primary">
+              <img
+                class="img-fluid"
+                src="/media/feed/blindaje.webp "
+                alt=""
+                width="80"
+                height="100"
+              />
+              <h2>RANSOMWARE</h2>
+              <a
+                href="{% url 'ransomware' %}"
+                class="btn__text-cover btn__text bg-primary"
+                >Consultar</a
+              >
+            </div>
+            <div class="card__trust box__card-primary">
+              <img
+                class="img-fluid"
+                src="/media/feed/bote-de-basura (1).webp"
+                alt=""
+                width="80"
+                height="100"
+              />
+              <h2>DUMPSTER</h2>
+              <a
+                href="{% url 'dumsterdiving' %}"
+                class="btn__text-cover btn__text bg-primary"
+                >Consultar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--construccion Metodologia banner-->
+
+      <div class="container-fluid container__about div__offset">
+        <div class="about">
+          <div class="text__about text-primary">
+            <h1>Conoce El Paso A Paso de Nuestra Metodología</h1>
+            <p>Descubre de forma fácil el como resolver un ataque ransomware</p>
+            <a
+              href="{% url 'step1' %}"
+              class="btn__text-about btn__text bg-primary"
+              >Ir</a
+            >
+          </div>
+          <div class="image__about">
+            <img
+              class="img-fluid"
+              src="/media/feed/metodologia.gif"
+              alt=""
+              width="300px"
+              height="200px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--construccion Herramienta banner-->
+
+      <div class="container-fluid containerHerramienta">
+        <div class="tituloh">
+          <h1>Herramientas Contra Infecciónes Ransomware</h1>
+        </div>
+        <div class="container containerH">
+          <div class="image-fluid card">
+            <img src="/media/feed/R.webp" alt="" />
+            <h4 class="text-primary">Herramienta contra RIUK</h4>
+            <a href="{% url 'ryuk'  %}" class="text-primary">Leer Más-></a>
+          </div>
+
+          <div class="image-fluid card">
+            <img src="/media/feed/w.webp" alt="" />
+            <h4 class="text-primary">Herramienta Contra WANNACRY</h4>
+            <a href="{% url 'wanna1'  %}" class="text-primary">Leer más-></a>
+          </div>
+
+          <div class="image-fluid card">
+            <img src="/media/feed/B.webp" alt="" />
+            <h4 class="text-primary">Herramienta Contra BAD RABBIT</h4>
+            <a href="{% url 'badRabbit'  %}" class="text-primary">Leer más-></a>
+          </div>
+
+          <div class="image-fluid card">
+            <img src="/media/feed/J.webp" alt="" />
+            <h4 class="text-primary">Herramienta Contra JIGSAW</h4>
+            <a href="{% url 'jigsaw'  %}" class="text-primary">Leer más-></a>
+          </div>
+
+          <div class="image-fluid card">
+            <img src="/media/feed/P.webp" alt="" />
+            <h4 class="text-primary">Herramienta Contra PETYA</h4>
+            <a href="{% url 'petya'  %}" class="text-primary">Leer más-></a>
+          </div>
+
+          <div class="btnH">
+            <a
+              href="{% url 'encryption8' %}"
+              class="btn__text-cover btn__text bg-primary"
+              >Mas Herramientas --></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--SECCION DE VIDEOS-->
+
+      <div class="containder-fluid info">
+        <div class="tituloI">
+          <h1>Información multimedia</h1>
+        </div>
+        <div class="container-fluid video1">
+          <dialog id="ms">
+            <iframe
+              width="100%"
+              height="90%"
+              src="https://www.youtube.com/embed/JXDUKotmsWQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <button id="close" onclick="document.getElementById('ms').close()">
+              Cerrar!
+            </button>
+          </dialog>
+          <p>Saber mas sobre Ciberseguridad</p>
+          <button
+            class="bg-primary"
+            id="show"
+            onclick="document.getElementById('ms').showModal()"
+          >
+            Mostrar
+          </button>
+        </div>
+
+        <div class="video2">
+          <dialog id="ms1">
+            <iframe
+              width="100%"
+              height="90%"
+              src="https://www.youtube.com/embed/_sVObRVfoms"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <button id="close" onclick="document.getElementById('ms1').close()">
+              Cerrar!
+            </button>
+          </dialog>
+          <p>Que es un ataque DDos??????? ......</p>
+          <button
+            class="bg-primary"
+            id="show"
+            onclick="document.getElementById('ms1').showModal()"
+          >
+            Mostrar
+          </button>
+        </div>
+
+        <div class="video3">
+          <dialog id="ms2">
+            <iframe
+              width="100%"
+              height="90%"
+              src="https://www.youtube.com/embed/wRicjp13sr4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <button id="close" onclick="document.getElementById('ms2').close()">
+              Cerrar!
+            </button>
+          </dialog>
+          <p>Historia y evolución del Ransomware</p>
+          <button
+            class="bg-primary"
+            id="show"
+            onclick="document.getElementById('ms2').showModal()"
+          >
+            Mostrar
+          </button>
+        </div>
+      </div>
+
+      <!--SECCION FOOTER-->
+      <!-- Footer Start -->
+      <div class="container-fluid bg-dark text-white-50">
+        <div class="row pt-5">
+          <div class="col-lg-3 col-md-6 mb-5">
+            <a href="{% url 'step1' %}" class="navbar-brand">
+              <h1 class="text-primary">
+                <span class="text-white">METODO</span>LOGÍA
+              </h1>
+            </a>
+            <p>
+              Metodología creada para capacitar a empresas para hacerle frente a
+              infecciones ransomware
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h5
+              class="text-white text-uppercase mb-4"
+              style="letter-spacing: 5px"
+            >
+              Nuestros Servicios
+            </h5>
+            <div class="d-flex flex-column justify-content-start">
+              <a class="text-white-50 mb-2" href="{% url 'feed' %}"
+                ><i class="fa fa-angle-right mr-2"></i>Inicio</a
+              >
+              <a class="text-white-50 mb-2" href="{% url 'method' %}"
+                ><i class="fa fa-angle-right mr-2"></i>Documentación</a
+              >
+              <a class="text-white-50 mb-2" href="{% url 'train' %}"
+                ><i class="fa fa-angle-right mr-2"></i>Capacitacion</a
+              >
+              <a class="text-white-50 mb-2" href="{% url 'step1' %}"
+                ><i class="fa fa-angle-right mr-2"></i>Metodología</a
+              >
+              <a class="text-white-50 mb-2" href="{% url 'encryption8' %}"
+                ><i class="fa fa-angle-right mr-2"></i>Herramientas</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h5
+              class="text-white text-uppercase mb-4"
+              style="letter-spacing: 5px"
+            >
+              links funcionales
+            </h5>
+            <div class="d-flex flex-column justify-content-start">
+              <a
+                class="text-white-50 mb-2"
+                href="https://id-ransomware.malwarehunterteam.com/"
+                ><i class="fa fa-angle-right mr-2"></i>ID Ransomware</a
+              >
+              <a
+                class="text-white-50 mb-2"
+                href="https://latam.kaspersky.com/home-security?reseller=es-LA_bb2023_pro_ona_sem_bra_onl_b2c_goo_ppc-ad_______&utm_content=bb2023|generic&utm_id=bi_cmp-298177336_adg-1294125578123615_ad-80882956982290_kwd-80883071480946:loc-43_dev-c_ext-_prd-_sig-3ecd079b75db1311a69063bc2306550b&utm_source=google&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-%20SP%20-%20B-EXA-KW&msclkid=3ecd079b75db1311a69063bc2306550b&utm_source=bing&utm_medium=cpc&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-
+         %20SP%20-%20B-EXA-KW&utm_term=kaspersky&utm_content=kaspersky"
+                ><i class="fa fa-angle-right mr-2"></i>kaspersky</a
+              >
+              <a class="text-white-50 mb-2" href="https://www.emsisoft.com/en/"
+                ><i class="fa fa-angle-right mr-2"></i>emsisoft</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h5
+              class="text-white text-uppercase mb-4"
+              style="letter-spacing: 5px"
+            >
+              Contactanos
+            </h5>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Pasto, Colombia</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>+57 311 340 2393/p>
+            <p><i class="fa fa-envelope mr-2"></i>freurbano@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+        style="border-color: rgba(256, 256, 256, 0.1) !important"
+      >
+        <div class="row">
+          <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0"></div>
+          <div class="col-lg-6 text-center text-md-right"></div>
+        </div>
+      </div>
+      <!-- Footer End -->
+    </main>
+
+    <!--*** Link del Javascript del Boostrap ***-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

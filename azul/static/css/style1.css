@@ -1,0 +1,709 @@
+/* CODIGO ESTILOS feed.html Freyder*/
+/*PRESENTACION DE LA PAGINA*/
+
+/*VARIABLES DE COLORES A USAR EN TODA LA PAGINA*/
+:root {
+  --color_text-primary: #AB29CA;
+  --color_text-secundary: #101E2C;
+  --color_text-tertiary: #485663;
+  --main_color-primary: #9A00BF;
+  --main_color-secundary: #F4D4FB;
+  --background-color: #FAFBFE;
+  --lowText_font_size: 16px;
+  --text_size_title: 40px;
+  --text_title_card: 24px;
+  --text_title_cardv2: 20px;
+  --text_paragraph: 16px;
+  --box_shadow-primary: 0px 6px 50px -20px rgba(0, 0, 0, 0.2);
+}
+
+/*inicio PRESENTACION DE LA PAGINA*/
+
+.container__aboutT {
+  height: 650px;
+  padding: 50px 0px;
+  margin-right: 40px;
+  margin-left: 40px;
+  background: var(--background-color);
+  box-shadow: var(--box_shadow-primary);
+}
+
+.aboutT {
+  height: 550px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(background-color);
+  box-shadow: 5px 10px 10px gray;
+  border: 5px;
+  border-radius: 10px;
+}
+
+.text__aboutT {
+  width: 100%;
+  height: 300px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.text__aboutT h1 {
+  
+  padding: 10px;
+  font-weight: 700;
+  box-shadow: 5px 10px 10px gray;
+  border: 5px solid transparent;
+  border-radius: 10px;
+}
+
+.text__aboutT p {
+  font-size: var(--text_paragraph);
+  margin-top: 50px;
+  color: black;
+  font-weight: 600;
+}
+
+.text__aboutT a {
+  width: 100%;
+  background-color: blue;
+  letter-spacing: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+  transition: 500ms;
+}
+
+.image__aboutT {
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+
+.image__aboutT img {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+}
+
+
+.text__cover {
+  width: 100%;
+  padding-right: 150px;
+}
+
+.text__cover h1 {
+  font-size: 40px;
+  color: var(--color_text-secundary);
+}
+
+.text__cover p {
+  font-size: var(--text_paragraph);
+  margin-top: 40px;
+  justify-content: center;
+  color: var(--color_text-tertiary);
+}
+
+.btn__text {
+  margin-top: 20px;
+  display: block;
+  width: 150px;
+  padding: 10px 10px;
+  text-align: center;
+  font-weight: 400;
+  background-color: blue;
+  color: white;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 300ms;
+  text-decoration: none;
+}
+
+.btn__text:hover {
+  background-color: blue;
+  border: 2px solid black;
+  color: white;
+  box-shadow: var(--box_shadow-primary);
+}
+
+.image__cover {
+  width: 100%;
+}
+
+.image__cover img {
+  width: 550px;
+  height: 450px;
+}
+
+/*ESTILOS CAPACITACION*/
+
+.container__card-primary {
+  padding-top: 50px;
+  text-align: center;
+  padding: 1px;
+  height: 100%;
+}
+
+.card__primary {
+  background-color: white;
+  height: 500px;
+}
+
+.text__card-primary {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 4px;
+}
+
+.text__card-primary p {
+  color: var(--color_text-primary);
+  letter-spacing: 4px;
+  font-size: var(--text_paragraph);
+  font-weight: 500;
+}
+
+.text__card-primary h1 {
+  color: var(--color_text-tertiary);
+  letter-spacing: 5px;
+  font-size: var(--text_size_title);
+  font-weight: 600;
+}
+
+.container__box-card-primary {
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 5px 10px 10px gray;
+}
+
+.container__box-card-primary :hover {
+  border: 1px solid transparent;
+  box-shadow: 5px 10px 10px gray;
+  transition: all 500ms;
+}
+
+.box__card-primary {
+  max-width: 250px;
+  padding: 20px 50px;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+}
+
+.box__card-primary h2 {
+  font-size: var(--text_title_card);
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/*ESTILOS METODOLOGIA*/
+
+.container__about {
+  padding: 50px 0px;
+  margin-right: 40px;
+  margin-left: 40px;
+  background: var(--background-color);
+  margin-top: 1px;
+}
+
+.about {
+  max-width: 1100px;
+  height: 400px;
+  margin: auto;
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 10px 10px gray;
+}
+
+.text__about {
+  width: 100%;
+  height: 300px;
+  margin-right: 5%;
+}
+
+.text__about h1 {
+  color: blue;
+  font-weight: 500;
+}
+
+.text__about p {
+  font-size: var(--text_paragraph);
+  margin-top: 40px;
+  color: var(--color_text-tertiary);
+}
+
+.text__about a {
+  width: 100%;
+  background-color: var(--color_text-primary);
+  letter-spacing: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+  transition: 500ms;
+}
+
+.image__about {
+  width: 100%;
+  height: 300px;
+  display: flex;
+}
+
+.image__about img {
+  margin: auto;
+  height: 300px;
+  width: 100%;
+}
+
+/*ESTILOS HERRAMIENTA */
+
+.containerHerramienta {
+  background-color: rgb(246, 249, 249);
+  height: 500px;
+  margin: 1px 40px;
+}
+
+.tituloh h1 {
+  background-color: white;
+  color: var(--color_text-primary);
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px;
+}
+
+.containerH {
+  border-radius: 5px;
+  background-color: white;
+  margin: 0 70px;
+  max-width: 1600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 5px 10px 10px gray;
+}
+
+.containerH .card {
+  width: 150px;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px gray;
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 1s;
+}
+
+.containerH .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px var(--color_text-primary);
+}
+
+.containerH .card img {
+  width: 150px;
+  height: 150px;
+}
+
+.containerH .card h4 {
+  font-size: 15px;
+  color: var(--color_text-primary);
+  margin: 5px;
+}
+
+.containerH .card a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color_text-primary);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.containerH .card a:hover {
+  color: var(--background-color);
+}
+
+.btnH a {
+  width: 100%;
+  background-color: bg-primary;
+  color: white;
+  letter-spacing: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+  transition: 500ms;
+}
+
+.btnH a:hover {
+  color: white;
+  background-color: white;
+  transition: all 700ms;
+}
+
+
+
+/*SECCION DE VIDEOS O NO SE QUE*/
+
+.info {
+  background-color: white;
+  height: 600px;
+  padding: 0 20px;
+}
+
+.tituloI h1 {
+  background-color: white;
+  color: var(--color_text-primary);
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px;
+}
+
+#ms {
+  background-color: black;
+  width: 650px;
+  height: 590px;
+  border-radius: 20px;
+}
+
+#ms1 {
+  background-color: black;
+  width: 650px;
+  height: 590px;
+  border-radius: 20px;
+}
+
+#ms2 {
+  background-color: black;
+  width: 650px;
+  height: 590px;
+  border-radius: 20px;
+}
+
+#ms button {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  width: 155px;
+  display: block;
+  margin: 2px 2px;
+  margin-left: 35%;
+  background-color: var(--color_text-primary);
+  color: white;
+}
+
+#ms1 button {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  width: 155px;
+  display: block;
+  margin: 2px 2px;
+  margin-left: 35%;
+  background-color: var(--color_text-primary);
+  color: white;
+}
+
+#ms2 button {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  width: 155px;
+  display: block;
+  margin: 2px 2px;
+  margin-left: 35%;
+  background-color: var(--color_text-primary);
+  color: white;
+}
+
+#show {
+  color: white;
+  letter-spacing: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  padding: 25px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+  transition: 500ms;
+}
+#show :hover{
+  background-color: bg-primary;
+  color: white;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+}
+
+#vidtext1 {
+  display: block;
+}
+
+#show:hover {
+  color: black;
+  background-color: white;
+  transition: all 700ms;
+}
+
+/*VENTANAS DE VIDEOS*/
+
+.video1 {
+  background-color: white;
+}
+
+.video1 p {
+  font-size: 25px;
+  position: relative;
+  margin-right: 40px;
+  margin-top: 10px;
+  text-align: left;
+  padding: 30px;
+  background-color: white;
+  display: inline-block;
+  width: 80%;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+  border-radius: 10px;
+}
+
+.video2 {
+  background-color: white;
+}
+
+.video2 p {
+  font-size: 25px;
+  position: relative;
+  margin-right: 40px;
+  margin-top: 10px;
+  text-align: left;
+  padding: 30px;
+  background-color: white;
+  display: inline-block;
+  width: 80%;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+  border-radius: 10px;
+}
+
+.video3 {
+  background-color: white;
+}
+
+.video3 p {
+  font-size: 25px;
+  position: relative;
+  margin-right: 40px;
+  margin-top: 10px;
+  text-align: left;
+  padding: 30px;
+  background-color: white;
+  display: inline-block;
+  width: 80%;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+  border-radius: 10px;
+}
+
+/*ESTILOS PARA NUEVA VENTANA DE VIDEO*/
+
+#vf1 {
+  display: none;
+}
+
+/*ESTILOS DEL FOOTER*/
+
+footer {
+  width: 100%;
+  background-color: white;
+  height: 150px;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+}
+
+section a {
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 50px 50px;
+}
+
+footer a:hover {
+  font-size: 20px;
+  color: var(--color_text-primary);
+  transition: 400ms;
+  cursor: pointer;
+}
+
+footer p {
+  padding: 60px;
+  text-align: center;
+}
+
+/*FINAL CODIGO ESTILOS feed.html Freyder*/
+
+/*INICIO ESTILOS PARA STEP1.HTML*/
+
+.titulo__pasos h1 {
+  text-align: center;
+}
+
+.pasos {
+  padding: 50px 0px;
+  margin-right: 40px;
+  margin-left: 40px;
+  background: white;
+  margin-top: 1px;
+}
+
+.step__pasos {
+  max-width: 1100px;
+  height: 300px;
+  margin: auto;
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 10px 10px gray;
+  background-color: white;
+}
+
+.text__pasos {
+  width: 100%;
+  height: 200px;
+  margin-right: 5%;
+  background-color: #302b63;
+}
+
+.text__pasos h3{
+  font-size: 40px;
+  text-align: center;
+  color: var(--color_text-primary);
+  font-weight: 500;
+}
+
+.text__pasos p{
+  text-align: center;
+  font-size: var(--text_paragraph);
+  font-weight: 600;
+  margin-top: 15px;
+  color: var(--color_text-tertiary);
+}
+
+.text__pasos h4{
+  font-size: var(--text_paragraph);
+  text-align: center;
+  margin: 5px;
+}
+
+.image__pasos {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  background-color: white;
+}
+
+.image__pasos {
+  height: 100px;
+  background-color: white;
+}
+
+#video__pasos {
+  background-color: black;
+  width: 760px;
+  height: 700px;
+  border-radius: 20px;
+}
+
+#video__pasos button {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  width: 155px;
+  height: 40px;
+  display: block;
+  margin: 2px 2px;
+  margin-left: 35%;
+  background-color: var(--color_text-primary);
+  color: white;
+}
+
+
+
+.image__pasos button {
+  height: 100px;
+}
+
+#mostrar__pasos {
+  background-color: var(--color_text-primary);
+  letter-spacing: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  padding: 25px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(48, 1, 66);
+  transition: 500ms;
+}
+
+#mostrar__pasos:hover {
+  color: black;
+  background-color: white;
+  transition: all 700ms;
+}
+
+/*FIN ESTILOS STEP1.HTML*/
+
+.cuerpo {
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #24243e,
+      #302b63,
+      #0f0c29);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,
+      #24243e,
+      #302b63,
+      #0f0c29);
+}
+
+.estilo1 {
+  color: black;
+}
+
+#bg_white {
+  color: #ffffff;
+}
+
+.estilo2 {
+  width: 200px;
+  height: 200px;
+}
+
+.estilo3 {
+  color: rgb(60, 0, 255);
+}
+
+.estilo4 {
+  background-color: #ffffff;
+}

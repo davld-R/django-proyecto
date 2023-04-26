@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style1.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style2.css' %}"
+    />
+    <!-- Link del Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Capacitación</title>
+  </head>
+  <body>
+    <!--! Este Código es la barra de navegación -->
+    <header class="main-head">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 pb-3">
+        {% if request.user.is_authenticated %}
+        <div class="container-fluid">
+          <a class="navbar-brand">Bienvenido/a {{ user.username }}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'feed' %}"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'method' %}">Documentación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'train' %}"
+                  >Capacitación</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'step1' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'encryption8' %}"
+                  >Herramientas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% else %} {% endif %}
+      </nav>
+    </header>
+
+    <!--Todo: Programación del Body -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block"></div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a class="navbar-brand">
+            <h1 class="m-0 ms-5 text-primary">
+              <span class="text-dark">INGENIERÍA</span> SOCIAL
+            </h1>
+          </a>
+
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+
+        <!-- About Start -->
+        <div class="container-fluid py-5">
+          <div class="container pt-5">
+            <div class="row">
+              <div class="col-lg-6" style="min-height: 500px">
+                <div class="position-relative h-100">
+                  <img
+                    class="position-absolute w-100 h-100"
+                    src="/media/feed/ingSocial.webp"
+                    style="object-fit: cover"
+                  />
+                </div>
+                texto por si se requieren citas
+              </div>
+              <div class="col-lg-6 pt-5 pb-lg-5">
+                <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                  <h6
+                    class="text-primary text-uppercase"
+                    style="letter-spacing: 5px"
+                  >
+                    INGENIERÍA SOCIAL
+                  </h6>
+                  <h1 class="mb-3">
+                    Técnica de Manipulación para conseguir datos de usuarios en
+                    general
+                  </h1>
+                  <p>
+                    Los ataques de este tipo son notoriamente difíciles de
+                    impedir porque atacan profesionalmente la psicología humana
+                  </p>
+                  <div class="row mb-4">
+                    <div class="col-6">
+                      <img class="img-fluid" src="img/about-1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <a
+                    href="{% url 'capacitacion' %}"
+                    class="btn btn-primary mt-1"
+                    >Informate más</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- INGENIERIA SOCIAL End -->
+
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a class="navbar-brand">
+            <h1 class="m-0 text-primary ms-5">
+              <span class="text-dark">PHISH</span>ING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+
+        <!-- About Start -->
+        <div class="container-fluid py-5">
+          <div class="container pt-5">
+            <div class="row">
+              <div class="col-lg-6" style="min-height: 500px">
+                <div class="position-relative h-100">
+                  <img
+                    class="position-absolute w-100 h-100"
+                    src="/media/feed/phi.webp"
+                    style="object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6 pt-5 pb-lg-5">
+                <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                  <h6
+                    class="text-primary text-uppercase"
+                    style="letter-spacing: 5px"
+                  >
+                    PHISHING
+                  </h6>
+                  <h1 class="mb-3">Técnica de Ingenría Social más usada</h1>
+                  <p>
+                    Suplantación de identidad usada para engañar usuarios para
+                    obtener contraseñas, números de tarjeta y de más datos
+                    vitales.
+                  </p>
+                  <div class="row mb-4">
+                    <div class="col-6">
+                      <img class="img-fluid" src="img/about-1.jpg" alt="" />
+                    </div>
+                    <div class="col-6">
+                      <img class="img-fluid" src="img/about-2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <a href="{% url 'phishing' %}" class="btn btn-primary mt-1"
+                    >Informate más</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- About End -->
+
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a class="navbar-brand">
+            <h1 class="m-0 text-primary ms-5">
+              <span class="text-dark">RANSOM</span>WARE
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+
+        <!-- About Start -->
+        <div class="container-fluid py-5">
+          <div class="container pt-5">
+            <div class="row">
+              <div class="col-lg-6" style="min-height: 500px">
+                <div class="position-relative h-100">
+                  <img
+                    class="position-absolute w-100 h-100"
+                    src="/media/feed/ransom.webp"
+                    style="object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6 pt-5 pb-lg-5">
+                <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                  <h6
+                    class="text-primary text-uppercase"
+                    style="letter-spacing: 5px"
+                  >
+                    RANSOMWARE
+                  </h6>
+                  <h1 class="mb-3">
+                    Uno de los métodos más peligrosos usados para chantajear
+                    personas y empresas.
+                  </h1>
+                  <p>
+                    Malware de rescate impidiendo a usuarios a acceder a sus
+                    sistemas.
+                  </p>
+                  <div class="row mb-4">
+                    <div class="col-6">
+                      <img class="img-fluid" src="img/about-1.jpg" alt="" />
+                    </div>
+                    <div class="col-6">
+                      <img class="img-fluid" src="img/about-2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <a href="{% url 'ransomware' %}" class="btn btn-primary mt-1"
+                    >Informate más</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- About End -->
+
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a class="navbar-brand">
+            <h1 class="m-0 text-primary ms-5">
+              <span class="text-dark">DUMSTER</span>DIVING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+
+        <!-- About Start -->
+        <div class="container-fluid py-5">
+          <div class="container pt-5">
+            <div class="row">
+              <div class="col-lg-6" style="min-height: 500px">
+                <div class="position-relative h-100">
+                  <img
+                    class="position-absolute w-100 h-100"
+                    src="/media/feed/dd.webp"
+                    style="object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6 pt-5 pb-lg-5">
+                <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                  <h6
+                    class="text-primary text-uppercase"
+                    style="letter-spacing: 5px"
+                  >
+                    DUMPSTER DIVING
+                  </h6>
+                  <h1 class="mb-3">
+                    La basura de un hombre es el tesoro de otro
+                  </h1>
+                  <p>
+                    Investigar la basura de una empresa y/o empresa para
+                    encontrar información que pueda ser utilizada para atacar su
+                    red informática.
+                  </p>
+                  <div class="row mb-4">
+                    <div class="col-6">
+                      <img class="img-fluid" src="img/about-1.jpg" alt="" />
+                    </div>
+                    <div class="col-6">
+                      <img class="img-fluid" src="img/about-2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <a
+                    href="{% url 'dumsterdiving' %}"
+                    class="btn btn-primary mt-1"
+                    >Informate más</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- About End -->
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50" style="margin-top: 90px">
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="{% url 'step1' %}" class="navbar-brand">
+            <h1 class="text-primary">
+              <span class="text-white">METODO</span>LOGÍA
+            </h1>
+          </a>
+          <p>
+            Metodología creada para capacitar a empresas para hacerle frente a
+            infecciones ransomware
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Nuestros Servicios
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white-50 mb-2" href="{% url 'feed' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Inicio</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'method' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Documentación</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'train' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Capacitacion</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'step1' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Metodología</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'encryption8' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Herramientas</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            links funcionales
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a
+              class="text-white-50 mb-2"
+              href="https://id-ransomware.malwarehunterteam.com/"
+              ><i class="fa fa-angle-right mr-2"></i>ID Ransomware</a
+            >
+            <a
+              class="text-white-50 mb-2"
+              href="https://latam.kaspersky.com/home-security?reseller=es-LA_bb2023_pro_ona_sem_bra_onl_b2c_goo_ppc-ad_______&utm_content=bb2023|generic&utm_id=bi_cmp-298177336_adg-1294125578123615_ad-80882956982290_kwd-80883071480946:loc-43_dev-c_ext-_prd-_sig-3ecd079b75db1311a69063bc2306550b&utm_source=google&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-%20SP%20-%20B-EXA-KW&msclkid=3ecd079b75db1311a69063bc2306550b&utm_source=bing&utm_medium=cpc&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-
+            %20SP%20-%20B-EXA-KW&utm_term=kaspersky&utm_content=kaspersky"
+              ><i class="fa fa-angle-right mr-2"></i>kaspersky</a
+            >
+            <a class="text-white-50 mb-2" href="https://www.emsisoft.com/en/"
+              ><i class="fa fa-angle-right mr-2"></i>emsisoft</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Contactanos
+          </h5>
+          <p><i class="fa fa-map-marker-alt mr-2"></i>Pasto, Colombia</p>
+          <p><i class="fa fa-phone-alt mr-2"></i>+57 311 340 2393</p>
+          <p><i class="fa fa-envelope mr-2"></i>freurbano@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+      style="border-color: rgba(256, 256, 256, 0.1) !important"
+    >
+      <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0"></div>
+        <div class="col-lg-6 text-center text-md-right"></div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Link del Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

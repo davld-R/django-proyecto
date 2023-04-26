@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link del Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--! Este Código es la barra de navegación -->
+    <header class="main-head">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 pb-3">
+        {% if request.user.is_authenticated %}
+        <div class="container-fluid">
+          <a class="navbar-brand">Bienvenido/a {{ user.username }}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'feed' %}"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'method' %}">Documentación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'train' %}"
+                  >Capacitación</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'step1' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'encryption8' %}"
+                  >Herramientas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% else %} {% endif %}
+      </nav>
+    </header>
+    <!--! Desde aca empieza la programción del body  -->
+
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">PHISH</span>ING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+      <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="w-100 p-5"
+              style="max-height: 900px"
+              src="/media/feed/PS1.webp"
+              alt="Image"
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 900px">
+                <h4 class="text-white text-uppercase mb-md-3">
+                  TODO LO NECESARIO SOBRE
+                </h4>
+                <h1 class="display-3 text-white mb-md-4">PHISHING</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="w-100 p-5"
+              style="max-height: 900px"
+              src="/media/feed/PS3.webp"
+              alt="Image"
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 900px">
+                <h4 class="text-white text-uppercase mb-md-3">
+                  TODO LO NECESARIO SOBRE
+                </h4>
+                <h1 class="display-3 text-white mb-md-4">PHISHING</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#header-carousel"
+          data-slide="prev"
+        >
+          <div class="btn btn-dark" style="width: 45px; height: 45px">
+            <span class="carousel-control-prev-icon mb-n2"></span>
+          </div>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#header-carousel"
+          data-slide="next"
+        >
+          <div class="btn btn-dark" style="width: 45px; height: 45px">
+            <span class="carousel-control-next-icon mb-n2"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">QUE ES EL</span> PHISHING?
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Booking Start -->
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/PS4.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Que es el phishing?
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                El phishing es un tipo de ciberdelito en el que
+                                los hackers intentan engañar a las víctimas para
+                                robar información confidencial, como nombres de
+                                usuario, contraseñas, números de tarjetas de
+                                crédito y otros datos confidenciales. Los
+                                ataques de phishing suelen utilizar mensajes de
+                                correo electrónico que parecen de una empresa u
+                                organización legítima.
+                                <br />
+                                Las campañas de phishing se basan en dos
+                                factores. El primero es un señuelo, algo que
+                                llama la atención de la víctima. Puede tratarse
+                                de una advertencia o un mensaje alarmante con un
+                                sentido de urgencia que hace que la víctima
+                                actúe rápidamente, a menudo sin pensar en las
+                                posibles consecuencias. El segundo factor es la
+                                llegada, que puede ser un enlace o archivo
+                                adjunto malicioso, un sitio web falso o un
+                                formulario que solicita información como
+                                credenciales de inicio de sesión o información
+                                de tarjeta de crédito.
+                                <br />
+                                Cuando una campaña de phishing tiene éxito, los
+                                resultados pueden ser devastadores. Los ataques
+                                de phishing pueden implementar malware para
+                                secuestrar ordenadores como parte de una botnet
+                                que se utilizará para ataques de denegación de
+                                servicio. Algunas campañas de phishing convencen
+                                a los usuarios para que transfieran dinero a
+                                cuentas bancarias fraudulentas, mientras que
+                                otros ataques están diseñados para robar
+                                credenciales que proporcionan acceso a
+                                información confidencial de alto valor o
+                                propiedad intelectual.
+                                <br />
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?').close()"
+                    >
+                      Cerrar
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Encontrar información relevante sobre que es PHISHING
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Booking End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light booking navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">COMPONENTES DEL</span> PHISHING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!--AQUI EMPIEZA EL CODIGO NUEVO-->
+
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?1" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/PS2.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Componentes del phishing
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                Un ataque de este tipo contiene 3 componentes
+                                fundamentales los cuales se pueden consultar en
+                                el botón Componentes
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?1').close()"
+                    >
+                      Cerrar
+                    </button>
+                    <button
+                      class="btn btn-primary mx-2"
+                      id="show"
+                      onclick="document.getElementById('mas1').showModal()"
+                    >
+                      COMPONENTES
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+                  <dialog id="mas1" class="p-5">
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Componente 1 </span>
+                      El ataque se realiza mediante comunicaciones electrónicas,
+                      como un correo electrónico o una llamada de teléfono.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Componente 2 </span>
+                      El atacante se hace pasar por una persona u organización
+                      de confianza.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Componente 3 </span>
+                      El objetivo es obtener información personal confidencial,
+                      como credenciales de inicio de sesión o números de tarjeta
+                      de crédito.
+                    </h4>
+                    <br />
+                    <button
+                      class="btn btn-primary"
+                      id="close"
+                      onclick="document.getElementById('mas1').close()"
+                    >
+                      Volver
+                    </button>
+                  </dialog>
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Consulta los diferentes componentes del phishing
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?1').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--aqui termina el codigo nuevo-->
+
+    <!-- INICIO EVITAR ATAQUES -->
+
+    <!--AQUI EMPIEZA EL CODIGO NUEVO-->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light booking navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">ESTRATEGIAS DE ATAQUES</span> PHISHING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?2" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/EVITAR.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Estrategias del phishing
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                Los diferentes vectores expuestos usados por los
+                                hackers para timar a usuarios, hacen que exista
+                                una gran gama de ataques que van desde lo
+                                técnicamente admirable hasta lo mas básico
+                                <br />
+                                Haciendo click en Estrategias podra capacitarse
+                                en las estrategias ms comunes
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?2').close()"
+                    >
+                      Cerrar
+                    </button>
+                    <button
+                      class="btn btn-primary mx-2"
+                      id="show"
+                      onclick="document.getElementById('mas2').showModal()"
+                    >
+                      ESTRATEGIAS
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+                  <dialog id="mas2" class="p-5">
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Phishing de engaño: </span>
+                      es un término que se refiere específicamente al intento de
+                      los hackers por hacerse pasar por empresas o personas
+                      legítimas con el fin de obtener su confianza.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Phishing personalizado: </span>
+                      adapta sus ataques a cada objetivo concreto. Redes
+                      sociales profesionales como LinkedIn han popularizado el
+                      phishing personalizado dirigido contra empresas, ya que
+                      los hackers pueden encontrar fácilmente y en un mismo
+                      sitio toda su información laboral.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Whaling: </span>
+                      Dirigido contra una persona concreta de alto valor. Es
+                      igual que el phishing personalizado, pero con objetivos
+                      mucho más ambiciosos. Ni siquiera los grandes ejecutivos
+                      son inmunes a los ataques de whaling.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Fraude de CEO: </span>
+                      Se hacen pasar por el director ejecutivo (CEO) o por
+                      cualquier otro alto cargo de una empresa con el fin de
+                      obtener un pago o información sobre los empleados. Las
+                      campañas de fraude de CEO son habituales tras un ataque de
+                      whaling, pues el atacante ya ha obtenido las credenciales
+                      del directivo.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Pharming: </span>
+                      es una técnica de pharming que puede redirigirlo hasta la
+                      versión falsificada de un sitio web. Si no presta
+                      atención, no notará el engaño hasta que sea demasiado
+                      tarde.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark">
+                        Phishing por Dropbox y por Google Docs:
+                      </span>
+                      Los atacantes apañan versiones falsificadas de las
+                      pantallas de inicio de sesión, consiguen las credenciales
+                      del destinatario cuando las introduce y, a continuación,
+                      se dan un buen atracón con sus archivos y datos.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Phishing de clonación: </span>
+                      los atacantes toman un correo electrónico legítimo, lo
+                      «clonan» y envían una copia exacta a todos los
+                      destinatarios previos, con un cambio fundamental: ahora
+                      los enlaces son maliciosos.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Manipulación de enlaces: </span>
+                      los phishers envían enlaces que parecen conducir a una
+                      dirección URL, pero al hacer clic en ellos lo llevan a
+                      otra parte con, por lo general, errores de ortografía
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Scripting entre sitios: </span>
+                      phishers sofisticados pueden aprovechar debilidades en los
+                      scripts de un sitio web para secuestrarlo y emplearlo con
+                      distintos fines.
+                    </h4>
+                    <br />
+                    <button
+                      class="btn btn-primary"
+                      id="close"
+                      onclick="document.getElementById('mas2').close()"
+                    >
+                      Volver
+                    </button>
+                  </dialog>
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Consulta las diferentes estrategias de phishing
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?2').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--aqui termina el codigo nuevo-->
+
+    <!--AQUI EMPIEZA EL CODIGO NUEVO-->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light booking navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary mx-5">
+              <span class="text-dark">NORMAS DE PROTECCIÓN CONTRA</span>
+              PHISHING
+            </h1>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          ></div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container-fluid booking mt-5 pb-5">
+      <div class="container pb-5">
+        <div class="bg-light shadow" style="padding: 30px">
+          <div class="row align-items-center" style="min-height: 60px">
+            <div class="col-md-10">
+              <div class="row mx-5">
+                <div class="video3">
+                  <!--INICIO PRIMER DIALOG-->
+                  <dialog id="queES?3" class="p-5">
+                    <!-- About Start -->
+                    <div class="container-fluid py-5">
+                      <div class="container pt-5">
+                        <div class="row">
+                          <div class="col-lg-6" style="min-height: 500px">
+                            <div class="position-relative h-100">
+                              <img
+                                class="position-absolute w-100 h-100"
+                                src="/media/feed/EVITAR.webp"
+                                style="object-fit: cover"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pt-5 pb-lg-5">
+                            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                              <h6
+                                class="text-primary text-uppercase"
+                                style="letter-spacing: 5px"
+                              >
+                                Normas contra el phishing
+                              </h6>
+                              <p style="overflow-wrap: break-word">
+                                Se trata esencialmente de normas de protección
+                                contra el phishing a nivel mundial que permiten
+                                a los destinatarios confirmar si un correo
+                                electrónico que parece proceder de un dominio
+                                específico ha sido enviado por un servidor de
+                                correo autorizado para enviar correos
+                                electrónicos en nombre de ese dominio.
+                                <br />
+                                Cuando un remitente utiliza estas técnicas,
+                                puede proteger a los destinatarios contra los
+                                correos electrónicos falsos que pretenden
+                                proceder de su dominio.
+                                <br />
+                                Haciendo click en el boton Normas contra
+                                phishing podra capacitarce en el tema
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-primary mx-5"
+                      id="close"
+                      onclick="document.getElementById('queES?3').close()"
+                    >
+                      Cerrar
+                    </button>
+                    <button
+                      class="btn btn-primary mx-2"
+                      id="show"
+                      onclick="document.getElementById('mas3').showModal()"
+                    >
+                      NORMAS CONTRA PHISHING
+                    </button>
+                  </dialog>
+                  <!--FIN PRIMER DIALOG-->
+
+                  <!--INICIO SEGUNDO DIALOG-->
+                  <dialog id="mas3" class="p-5">
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark">
+                        Mantenga su software antivirus actualizado:
+                      </span>
+                      Es importante mantener el software antivirus actualizado
+                      para detectar las nuevas amenazas a medida que surgen.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark">
+                        Autenticación de dos factores:
+                      </span>
+                      Consiste en un código de un solo uso que debe introducirse
+                      después de haber introducido una contraseña o un PIN, en
+                      lugar de depender de una contraseña tradicional, lo que
+                      dificulta el acceso de los hackers a las cuentas.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Capacitación: </span>
+                      Realizar capacitaciones dentro de organizaciones puede
+                      ayudar a los empleados a evitar caer en los correos
+                      electrónicos de phishing enseñando la diferencia entre un
+                      correo electrónico legítimo y uno que no lo es.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark">
+                        Métodos de detección de phishing:
+                      </span>
+                      bloquear esos correos electrónicos dañinos de forma
+                      automática utilizando varias herramientas de seguridad
+                      cómo software antimalware, software antivirus, etc.
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark">
+                        Nombre de dominio mal escrito:
+                      </span>
+                      Los correos electrónicos de phishing suelen contener un
+                      nombre de dominio mal escrito. Por ejemplo, un correo
+                      electrónico que dice provenir de "www.facebook.com", pero
+                      que utiliza un nombre de dominio mal escrito
+                      "facebbok.com"
+                    </h4>
+                    <br />
+                    <h4 class="text-center text-primary">
+                      <span class="text-dark"> Adjuntos sospechosos: </span>
+                      El archivo adjunto suele ser un documento de Word que
+                      contiene una macro maliciosa que descarga automáticamente
+                      el malware en el ordenador al abrir el archivo.
+                    </h4>
+                    <br />
+                    <button
+                      class="btn btn-primary"
+                      id="close"
+                      onclick="document.getElementById('mas3').close()"
+                    >
+                      Volver
+                    </button>
+                  </dialog>
+                  <!--FIN SEGUNDO DIALOG-->
+                  <h4 class="w-100">
+                    Consulta las diferentes estrategias de phishing
+                  </h4>
+                  <button
+                    class="btn btn-primary"
+                    id="show"
+                    onclick="document.getElementById('queES?3').showModal()"
+                  >
+                    Consultar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--aqui termina el codigo nuevo-->
+
+    <!--termina evitar ataques-->>
+
+    <!--SECCION FOOTER-->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50">
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="{% url 'step1' %}" class="navbar-brand">
+            <h1 class="text-primary">
+              <span class="text-white">METODO</span>LOGÍA
+            </h1>
+          </a>
+          <p>
+            Metodología creada para capacitar a empresas para hacerle frente a
+            infecciones ransomware
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Nuestros Servicios
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white-50 mb-2" href="{% url 'feed' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Inicio</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'method' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Documentación</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'train' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Capacitacion</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'step1' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Metodología</a
+            >
+            <a class="text-white-50 mb-2" href="{% url 'encryption8' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Herramientas</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            links funcionales
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a
+              class="text-white-50 mb-2"
+              href="https://id-ransomware.malwarehunterteam.com/"
+              ><i class="fa fa-angle-right mr-2"></i>ID Ransomware</a
+            >
+            <a
+              class="text-white-50 mb-2"
+              href="https://latam.kaspersky.com/home-security?reseller=es-LA_bb2023_pro_ona_sem_bra_onl_b2c_goo_ppc-ad_______&utm_content=bb2023|generic&utm_id=bi_cmp-298177336_adg-1294125578123615_ad-80882956982290_kwd-80883071480946:loc-43_dev-c_ext-_prd-_sig-3ecd079b75db1311a69063bc2306550b&utm_source=google&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-%20SP%20-%20B-EXA-KW&msclkid=3ecd079b75db1311a69063bc2306550b&utm_source=bing&utm_medium=cpc&utm_campaign=M%20-%20CO%20-%20LATAM%20-%20B2C%20-%20PS%20-%20Branded%20-
+         %20SP%20-%20B-EXA-KW&utm_term=kaspersky&utm_content=kaspersky"
+              ><i class="fa fa-angle-right mr-2"></i>kaspersky</a
+            >
+            <a class="text-white-50 mb-2" href="https://www.emsisoft.com/en/"
+              ><i class="fa fa-angle-right mr-2"></i>emsisoft</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Contactanos
+          </h5>
+          <p><i class="fa fa-map-marker-alt mr-2"></i>Pasto, Colombia</p>
+          <p><i class="fa fa-phone-alt mr-2"></i>+57 311 340 2393</p>
+          <p><i class="fa fa-envelope mr-2"></i>freurbano@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+      style="border-color: rgba(256, 256, 256, 0.1) !important"
+    >
+      <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0"></div>
+        <div class="col-lg-6 text-center text-md-right"></div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- Link del Boostrap -->
+
+    <!-- Link del Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
