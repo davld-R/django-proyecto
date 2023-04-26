@@ -94,15 +94,18 @@ WSGI_APPLICATION = 'proyecto5.wsgi.application'
 
 DATABASES = {
         'default': dj_database_url.config(
-            default='postgresql://postgres:postgres@localhost:5432/mysite',
+            default='postgresql://postgres:postgres@localhost:5432/proyecto',
             conn_max_age=600
         )
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'proyecto',
-        # 'USER': 'postgres',
-        # 'PASSWORD': '7W\R[\qHj$L+x1Md8H9|',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '5432',
+        
+    #     'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'proyecto',
+    #     'USER': 'postgres',
+    #     'PASSWORD': '7W\R[\qHj$L+x1Md8H9|',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5432',
+    # }
 }
 
 
