@@ -15,20 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth.views import LoginView, LogoutView
-from azul import views
-# from . import views
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', LoginView.as_view(template_name='azul/login.html'), name='login'),
-    path('feed/', views.feed, name='feed'),
-    path('feed/method/', views.method, name='method'),
-    path('feed/train/', views.train, name='train'),
-    path('feed/step1/', views.step1, name='step1'),
-    path('feed/encryption8/', views.encryption8, name='encryption8'),
-    path('logout/', LogoutView.as_view(template_name='azul/logout.html'), name='logout'),
-
-    # path('', include('azul.urls')),
+    path('', include('azul.urls')),
 ] 
