@@ -31,13 +31,11 @@ DEBUG = 'RENDER' not in os.environ
 ALLOWED_HOSTS = []
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+if RENDER_EXTERNAL_HOSTNAME:ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 
 INSTALLED_APPS = [
-    'azul.apps.AzulConfig',
     'admin_interface',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'azul.apps.AzulConfig',
     'colorfield',
 ]
 
@@ -93,10 +92,7 @@ WSGI_APPLICATION = 'proyecto5.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-        'default': dj_database_url.config(
-            default='postgresql://postgres:postgres@localhost:5432/proyecto',
-            conn_max_age=600
-        )
+        'default': dj_database_url.config(default='postgresql://postgres:postgres@localhost:5432/dbproyecto',conn_max_age=600)
         
     #     'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
