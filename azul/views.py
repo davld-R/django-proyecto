@@ -21,7 +21,7 @@ def ransomware(request):
     return render(request, 'training/capacitacion/ransomware.html')
 
 # TODO: VIsta de Phishing
-@login_required
+
 def phishing(request):
     return render(request, 'training/capacitacion/phishing.html')
 
