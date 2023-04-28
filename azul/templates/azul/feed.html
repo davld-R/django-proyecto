@@ -24,9 +24,9 @@
 
     <header class="main-head">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 pb-3">
-        {% if request.user.is_authenticated %}
+        
         <div class="container-fluid">
-          <a class="navbar-brand">Bienvenido/a {{ user.username }}</a>
+          <a class="navbar-brand"></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -68,7 +68,7 @@
             </ul>
           </div>
         </div>
-        {% else %} {% endif %}
+      
       </nav>
     </header>
 
