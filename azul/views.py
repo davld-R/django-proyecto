@@ -36,7 +36,7 @@ def ejecucionPC(request):
     return render(request, 'training/ejecucion/ejecucionPC.html')
 
 # TODO: Vista de los PDF
-@login_required
+@login_required(login_url='feed')
 def method(request):
     return render(request, 'training/method.html')
 
