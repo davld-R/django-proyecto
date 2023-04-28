@@ -5,10 +5,28 @@ from .forms import CasesForm, MetodologiaForm, EncuestaForm
 from .models import *
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import AuthenticationForm
 from django.db.models import Q
 
-# def principal(request):
-#     return render(request, 'azul/principal.html')
+def principal(request):
+    if request.method == 'GET':
+        return render(request, 'azul/principal.html', {
+            'form': AuthenticationForm
+    })
+    else:
+        user = authenticate(
+            request, username=request.POST['username'], password=request.POST['password']
+        )
+        if user is None:
+            return render(request, 'azul/principal.html', {
+                'form': AuthenticationForm,
+                'error': 'username or password is incorrect'
+        })
+        else:
+            login(request, user)
+            return redirect('feed')
+
 
 # TODO: Vista de Dumsterdiving
 @login_required
