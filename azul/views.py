@@ -56,7 +56,7 @@ def encryption8(request):
     return render(request, 'encrypted/encryption8.html')
 
 # TODO: Vista de Inicio
-@login_required
+
 def feed(request):
     messages.success(request, '¡Bienvenido de nuevo!')
     return render(request, 'azul/feed.html')
