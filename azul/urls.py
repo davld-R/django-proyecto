@@ -8,9 +8,9 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-#     path('', LoginView.as_view(template_name='azul/login.html'), name='login'),
+    path('login/', LoginView.as_view(template_name='azul/login.html'), name='login'),
 
-     # path('', views.principal, name='principal'),
+     # path('login/', views.principal, name='principal'),
 
     path('', views.feed, name='feed'),
 #     path('feed/', views.feed, name='feed'),
