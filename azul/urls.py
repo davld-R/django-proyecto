@@ -10,10 +10,10 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
 #     path('login/', LoginView.as_view(template_name='azul/login.html'), name='login'),
 
-    path('logeo/', views.principal, name='principal'),
+    path('', views.principal, name='principal'),
 
-    path('', views.feed, name='feed'),
-#     path('feed/', views.feed, name='feed'),
+#     path('', views.feed, name='feed'),
+    path('feed/', views.feed, name='feed'),
 
     path('logout/', LogoutView.as_view(template_name='azul/logout.html'), name='logout'),
 
