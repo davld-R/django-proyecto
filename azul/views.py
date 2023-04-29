@@ -10,6 +10,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.db.models import Q
 
 def principal(request):
+    if request.user.is_authenticated:
+        return redirect('feed') #redirige al usuario a la página correspondiente si ya ha iniciado sesión
     if request.method == 'GET':
         return render(request, 'azul/principal.html', {
             'form': AuthenticationForm
@@ -26,6 +28,7 @@ def principal(request):
         else:
             login(request, user)
             return redirect('feed')
+
 
 
 # TODO: Vista de Dumsterdiving
@@ -75,6 +78,7 @@ def encryption8(request):
 
 # TODO: Vista de Inicio
 
+@login_required(login_url='principal')
 def feed(request):
     messages.success(request, '¡Bienvenido de nuevo!')
     return render(request, 'azul/feed.html')
