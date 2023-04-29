@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% if request.user.is_authenticated %}
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -427,5 +428,12 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+
+    {% else %}
+
+    <h1>Esta sin inciar sesion</h1>
+
+    {% endif %}
   </body>
 </html>
