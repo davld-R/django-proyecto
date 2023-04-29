@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% if request.user.is_authenticated %}
 {% load static %}
 <html lang="en">
 <head>
@@ -9,11 +8,6 @@
   <title>Document</title>
 </head>
 <body>
-
-  <h1>Estas iniciado sesión</h1>
-
-  {% else %}
-
   {{error}}
   <form method="post">
     {% csrf_token %}
@@ -22,8 +16,5 @@
       Iniciar sesion
     </button>
   </form>
-  
-  {% endif %} {% endblock %}
-
 </body>
 </html>
