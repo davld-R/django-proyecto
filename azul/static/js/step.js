@@ -64,13 +64,13 @@ const showImage1 = () => {
   setTimeout(() => {
     main2.style.display = "none";
     main3.style.display = "block";
-  }, 1000);
+  }, 4000);
   // 4000
 
   setTimeout(() => {
     main3.style.display = "none";
     main4.style.display = "block";
-  }, 1000);
+  }, 7000);
   // 7000
 };
 
@@ -661,7 +661,7 @@ const contenedosUnicesmagPng = document.getElementById(
 );
 
 const img = document.createElement("img");
-img.src = "/media/img/unicesmag.png";
+img.src = "https://live.staticflickr.com/65535/52870277862_c425e471d1_o.png";
 img.className = "desencriptarUnicesmagFun";
 img.onclick = function () {
   audio.play();
