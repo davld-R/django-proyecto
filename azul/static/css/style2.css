@@ -165,12 +165,16 @@
   position: relative;
 }
 .papelera {
+  width: 104;
+  height: 108px;
   cursor: pointer;
   position: absolute;
   top: 2%;
   margin-left: 35px;
 }
 .papelera-cambiado {
+  width: 104;
+  height: 108px;
   cursor: pointer;
   position: absolute;
   top: 2%;
