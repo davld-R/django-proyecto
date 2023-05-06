@@ -40,7 +40,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'feed' %}"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'feed' %}"
                   >Inicio</a
                 >
               </li>
@@ -48,9 +51,7 @@
                 <a class="nav-link" href="{% url 'method' %}">Documentación</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'train' %}"
-                  >Capacitación</a
-                >
+                <a class="nav-link" href="{% url 'train' %}">Capacitación</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'step1' %}">Metodología</a>
@@ -76,174 +77,286 @@
       <!--INICIO-->
       <!--Portada de inicio-->
 
-      <div class="container-fluid container__aboutT div__offset">
-        <div class="aboutT">
-          <div class="text__aboutT text-primary">
-            <h1>METODOLOGÍA PARA HACER FRENTE A UN ATAQUE RANSOMWARE</h1>
-            <p>
-              Página web dirigida a empresas con el fin de capacitar y dar
-              solucion a infecciónes ransomare
-            </p>
-            <a
-              href="{% url 'method' %}"
-              class="container-fluid btn__text-about btn__text btn-primary bg-primary"
-              >Conoce Nuestra Metodología</a
-            >
-          </div>
-          <div class="container image__aboutT">
-            <img src="/media/feed/ma.png" alt="" width="300px" height="200px" />
+      <!-- Carousel Start -->
+      <div class="container-fluid p-0" style="background-color: white">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="w-100 p-5"
+                style="max-height: 900px"
+                src="https://live.staticflickr.com/65535/52874158015_2324cb4e86_c.jpg"
+                alt="Image"
+              />
+              <div
+                class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+              >
+                <div class="p-3" style="max-width: 900px">
+                  <h4 class="text-white text-uppercase mb-md-3">
+                    BIENVENIDOS A NUSTRA PÁGINA DE CAPACITACIÓN CONTRA
+                    RANSOMWARE
+                  </h4>
+                  <h1 class="display-3 text-white mb-md-5">
+                    CONOCE NUESTRA DOCUMENTACIÓN
+                  </h1>
+                  <a
+                    href="{% url 'method' %}"
+                    class="btn btn-primary py-md-3 px-md-5 mt-1 mb-4"
+                    >IR A DOCUMENTACIÓN</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <!-- Carousel End -->
+
+      <!-- Feature Start -->
+      <div class="container-fluid pb-5" style="background-color: white">
+        <div class="container pb-5">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="d-flex mb-4 mb-lg-0">
+                <div
+                  class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
+                  style="height: 120px; width: 120px"
+                >
+                  <img
+                    class="fa fa-2x fa-award text-white"
+                    src="https://live.staticflickr.com/65535/52873296567_3f83b19808_t.jpg"
+                  />
+                </div>
+                <div class="d-flex flex-column">
+                  <h5 class="m-4">Phishing</h5>
+                  <p class="m-4">Consultar mas sobre phishing</p>
+                </div>
+              </div>
+              <a
+                href="{% url 'phishing' %}"
+                class="m-5 btn btn-primary py-md-3 px-md-5 mt-5 mb-4"
+                >Ir a Phishing</a
+              >
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex mb-4 mb-lg-0">
+                <div
+                  class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
+                  style="height: 120px; width: 120px"
+                >
+                  <img
+                    class="fa fa-2x fa-award text-white"
+                    src="https://live.staticflickr.com/65535/52873874316_0be2339dba_t.jpg"
+                  />
+                </div>
+                <div class="d-flex flex-column">
+                  <h5 class="m-4">Ingeniería Social</h5>
+                  <p class="m-4">Consultar Ingeniería Social</p>
+                </div>
+              </div>
+              <a
+                href="{% url 'capacitacion' %}"
+                class="m-5 btn btn-primary py-md-3 px-md-5 mt-5 mb-4"
+                >Ir a Ingeniería Social</a
+              >
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex mb-4 mb-lg-0">
+                <div
+                  class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
+                  style="height: 120px; width: 120px"
+                >
+                  <img
+                    class="fa fa-2x fa-award text-white"
+                    src="https://live.staticflickr.com/65535/52874255855_dbfe79a61c_t.jpg"
+                  />
+                </div>
+                <div class="d-flex flex-column">
+                  <h5 class="m-4">Ransomware</h5>
+                  <p class="m-4">Consultar sobre ransomare</p>
+                </div>
+              </div>
+              <a
+                href="{% url 'ransomware' %}"
+                class="m-5 btn btn-primary py-md-3 px-md-5 mt-5 mb-4"
+                >Ir a Ransomare</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature End -->
+
+      <!-- About Start -->
+      <div class="container-fluid py-5">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-lg-6" style="min-height: 500px">
+              <div class="position-relative h-100">
+                <img
+                  class="position-absolute w-100 h-100"
+                  src="https://live.staticflickr.com/65535/52874289940_43671484f5_o.jpg"
+                  style="object-fit: cover"
+                />
+              </div>
+              Avalible en:
+              https://live.staticflickr.com/65535/52869259618_f2de148214_b.jpg
+            </div>
+            <div class="col-lg-6 pt-5 pb-lg-5">
+              <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                <h6
+                  class="text-primary text-uppercase"
+                  style="letter-spacing: 5px"
+                >
+                  METODOLOGÍA RANSOMWARE
+                </h6>
+                <h1 class="mb-3">
+                  Conoce nuestra metodologia creada para capacitarte
+                </h1>
+                <p>
+                  La finalidad de nuestra metodología es llegar al mayor número
+                  de usuarios para instruirlos de forma fácil y práctica.
+                </p>
+                <div class="row mb-4">
+                  <div class="col-6">
+                    <img class="img-fluid" src="img/about-1.jpg" alt="" />
+                  </div>
+                </div>
+                <a href="{% url 'step1' %}" class="btn btn-primary mt-1"
+                  >Informate más</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- INGENIERIA SOCIAL End -->
+
+      <!-- Destination Start -->
+      <div class="container-fluid py-5" style="background-color: white">
+        <div class="container pt-5 pb-3">
+          <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px">
+              HERRAMIENTAS CONTRA RANSOMWARE
+            </h6>
+            <h1>
+              Esta sección contiene algunas herramientas contra ransomware
+            </h1>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="destination-item position-relative overflow-hidden mb-2"
+              >
+                <img
+                  width="280px"
+                  height="280px"
+                  class="img-fluid"
+                  src="https://live.staticflickr.com/65535/52874255855_dbfe79a61c_n.jpg"
+                  alt=""
+                />
+                <a class="btn btn-primary" href="{% url 'ryuk'  %}">
+                  <h5 class="text-white m-4 ms-5">Herramienta contra RIUK</h5>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="destination-item position-relative overflow-hidden mb-2"
+              >
+                <img
+                  width="300px"
+                  height="300px"
+                  class="img-fluid"
+                  src="https://live.staticflickr.com/65535/52873960101_30b6f1e3bd_o.png"
+                />
+                <a class="btn btn-primary" href="{% url 'wanna1'  %}">
+                  <h5 class="text-white m-4 ms-5">
+                    Herramienta contra WANNACRY
+                  </h5>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="destination-item position-relative overflow-hidden mb-2"
+              >
+                <img
+                  width="280px"
+                  height="280px"
+                  class="img-fluid"
+                  src="https://live.staticflickr.com/65535/52874406823_2a5309999c_o.jpg"
+                />
+                <a class="btn btn-primary" href="{% url 'badRabbit'  %}">
+                  <h5 class="text-white m-4 ms-5">Herramienta Bad Rabbit</h5>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="destination-item position-relative overflow-hidden mb-2"
+              >
+                <img
+                  width="300px"
+                  height="300px"
+                  class="img-fluid"
+                  src="https://live.staticflickr.com/65535/52874140589_6164d6f0d7_o.jpg"
+                />
+                <a class="btn btn-primary" href="{% url 'jigsaw'  %}">
+                  <h5 class="text-white m-4 ms-5">Herramienta para Jigsaw</h5>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="destination-item position-relative overflow-hidden mb-2"
+              >
+                <img
+                  width="275px"
+                  height="275px"
+                  class="img-fluid"
+                  src="https://live.staticflickr.com/65535/52873975751_8cd1dd8bec_o.jpg"
+                />
+                <a class="btn btn-primary" href="{% url 'petya'  %}">
+                  <h5 class="text-white m-4 ms-5">Herramienta para Petya</h5>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="destination-item position-relative overflow-hidden mb-2"
+              >
+                <img
+                  width="255px"
+                  height="255px"
+                  class="img-fluid"
+                  src="https://live.staticflickr.com/65535/52874359335_39ce8f606e_o.png"
+                />
+                <a class="btn btn-primary" href="{% url 'tools'  %}">
+                  <h5 class="text-white m-4 ms-5">Herramienta contra Locky</h5>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Destination Start -->
 
       <!--construccion Capacitacion banner-->
 
-      <div class="container-fluid container__trust container__card-primary">
-        <div class="container-fluid trust card__primary">
-          <div class="text__trust text__card-primary">
-            <p>CAPACITACIÓN DIRIGIDA A EMPRESAS</p>
-            <h1 class="text-primary">Capacítate en temas como</h1>
-          </div>
-          <div class="container container__trust container__box-card-primary">
-            <div class="card__trust box__card-primary">
-              <img
-                class="img-fluid"
-                src="/media/feed/busqueda.webp"
-                alt=""
-                width="80"
-                height="100"
-              />
-              <h2>PHISHING</h2>
-              <a
-                href="{% url 'phishing' %}"
-                class="btn__text-cover btn__text bg-primary"
-                >Consultar</a
-              >
-            </div>
-            <div class="card__trust box__card-primary">
-              <img
-                class="img-fluid"
-                src="/media/feed/redes-sociales.webp"
-                alt=""
-                width="80"
-                height="100"
-              />
-              <h2>FRAUDE</h2>
-              <a
-                href="{% url 'capacitacion' %}"
-                class="btn__text-cover btn__text bg-primary"
-                >Consultar</a
-              >
-            </div>
-            <div class="card__trust box__card-primary">
-              <img
-                class="img-fluid"
-                src="/media/feed/blindaje.webp "
-                alt=""
-                width="80"
-                height="100"
-              />
-              <h2>RANSOMWARE</h2>
-              <a
-                href="{% url 'ransomware' %}"
-                class="btn__text-cover btn__text bg-primary"
-                >Consultar</a
-              >
-            </div>
-            <div class="card__trust box__card-primary">
-              <img
-                class="img-fluid"
-                src="/media/feed/bote-de-basura (1).webp"
-                alt=""
-                width="80"
-                height="100"
-              />
-              <h2>DUMPSTER</h2>
-              <a
-                href="{% url 'dumsterdiving' %}"
-                class="btn__text-cover btn__text bg-primary"
-                >Consultar</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!--construccion Metodologia banner-->
-
-      <div class="container-fluid container__about div__offset">
-        <div class="about">
-          <div class="text__about text-primary">
-            <h1>Conoce El Paso A Paso de Nuestra Metodología</h1>
-            <p>Descubre de forma fácil el como resolver un ataque ransomware</p>
-            <a
-              href="{% url 'step1' %}"
-              class="btn__text-about btn__text bg-primary"
-              >Ir</a
-            >
-          </div>
-          <div class="image__about">
-            <img
-              class="img-fluid"
-              src="/media/feed/metodologia.gif"
-              alt=""
-              width="300px"
-              height="200px"
-            />
-          </div>
-        </div>
-      </div>
 
       <!--construccion Herramienta banner-->
 
-      <div class="container-fluid containerHerramienta">
-        <div class="tituloh">
-          <h1>Herramientas Contra Infecciónes Ransomware</h1>
-        </div>
-        <div class="container containerH">
-          <div class="image-fluid card">
-            <img src="/media/feed/R.webp" alt="" />
-            <h4 class="text-primary">Herramienta contra RIUK</h4>
-            <a href="{% url 'ryuk'  %}" class="text-primary">Leer Más-></a>
-          </div>
-
-          <div class="image-fluid card">
-            <img src="/media/feed/w.webp" alt="" />
-            <h4 class="text-primary">Herramienta Contra WANNACRY</h4>
-            <a href="{% url 'wanna1'  %}" class="text-primary">Leer más-></a>
-          </div>
-
-          <div class="image-fluid card">
-            <img src="/media/feed/B.webp" alt="" />
-            <h4 class="text-primary">Herramienta Contra BAD RABBIT</h4>
-            <a href="{% url 'badRabbit'  %}" class="text-primary">Leer más-></a>
-          </div>
-
-          <div class="image-fluid card">
-            <img src="/media/feed/J.webp" alt="" />
-            <h4 class="text-primary">Herramienta Contra JIGSAW</h4>
-            <a href="{% url 'jigsaw'  %}" class="text-primary">Leer más-></a>
-          </div>
-
-          <div class="image-fluid card">
-            <img src="/media/feed/P.webp" alt="" />
-            <h4 class="text-primary">Herramienta Contra PETYA</h4>
-            <a href="{% url 'petya'  %}" class="text-primary">Leer más-></a>
-          </div>
-
-          <div class="btnH">
-            <a
-              href="{% url 'encryption8' %}"
-              class="btn__text-cover btn__text bg-primary"
-              >Mas Herramientas --></a
-            >
-          </div>
-        </div>
-      </div>
-
       <!--SECCION DE VIDEOS-->
 
-      <div class="containder-fluid info">
+      <div class="containder-fluid">
         <div class="tituloI">
           <h1>Información multimedia</h1>
         </div>
@@ -395,7 +508,7 @@
               Contactanos
             </h5>
             <p><i class="fa fa-map-marker-alt mr-2"></i>Pasto, Colombia</p>
-            <p><i class="fa fa-phone-alt mr-2"></i>+57 311 340 2393/p>
+            <p><i class="fa fa-phone-alt mr-2"></i>+57 311 340 2393/p></p>
             <p><i class="fa fa-envelope mr-2"></i>freurbano@gmail.com</p>
           </div>
         </div>

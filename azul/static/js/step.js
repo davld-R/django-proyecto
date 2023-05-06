@@ -285,6 +285,7 @@ const showImage16 = () => {
     bandera8 = true;
   }
 };
+let bandera12 = true;
 const contTarea10 = document.getElementById("contTarea10");
 const contTareaFlecha10 = document.getElementById("contTareaFlecha10");
 const contTarea6 = document.getElementById("contTarea6");
@@ -302,11 +303,23 @@ const cerrarButton = document.getElementById("cerrardiv");
 const contenedorVideo3 = document.getElementById("contenedorVideo3");
 const miVideo3 = document.getElementById("miVideo3");
 const cerrarVideo3 = document.getElementById("cerrarVideo3");
+const contenedorVideo4 = document.getElementById("contenedorVideo4");
+const miVideo4 = document.getElementById("miVideo4");
+const cerrarVideo4 = document.getElementById("cerrarVideo4");
+const contenedorVideo5 = document.getElementById("contenedorVideo5");
+const miVideo5 = document.getElementById("miVideo5");
+const cerrarVideo5 = document.getElementById("cerrarVideo5");
+const contenedorVideo6 = document.getElementById("contenedorVideo6");
+const miVideo6 = document.getElementById("miVideo6");
+const cerrarVideo6 = document.getElementById("cerrarVideo6");
 
 let arrayVideos = [
   "https://www.youtube.com/embed/cBFrohg8FOE?autoplay=1",
   "https://www.youtube.com/embed/60uu97eaXFQ?autoplay=1",
-  "https://www.youtube.com/embed/wWd0T_P4KG4?autoplay=1"
+  "https://www.youtube.com/embed/wWd0T_P4KG4?autoplay=1",
+  "https://www.youtube.com/embed/enHkY_kME0M?autoplay=1",
+  "https://www.youtube.com/embed/Mo7JouELCvk?autoplay=1",
+  "https://www.youtube.com/embed/J___zKRv33o?autoplay=1"
 ];
 
 function cerrarVideos(miVideo, contVideo, cerrarVideo) {
@@ -345,9 +358,21 @@ cerrarVideo3.onclick = function () {
   audio.play();
   cerrarVideos(miVideo3, contenedorVideo3, cerrarVideo3);
   cerrarTareas(contTarea10, contTareaFlecha10);
-  mostrarTareas(contTarea6, contTareaFlecha6);
-  mostrarTareas(img15, cifradoDecryptJigsaw);
+  // Video 4
+  reproducirVideos(miVideo4, arrayVideos[3], contenedorVideo4, cerrarVideo4);
 }
+cerrarVideo4.onclick = function () {
+  cerrarVideos(miVideo4, contenedorVideo4, cerrarVideo4);
+  mostrarTareas(img15, cifradoDecryptJigsaw);
+  mostrarTareas(contTarea6, contTareaFlecha6);
+}
+cerrarVideo5.onclick = function () {
+  cerrarVideos(miVideo5, contenedorVideo5, cerrarVideo5);
+}
+cerrarVideo6.onclick = function () {
+  cerrarVideos(miVideo6, contenedorVideo6, cerrarVideo6);
+}
+
 document.getElementById("tarea10Boton").onclick = function () {
   audio.play();
   cerrarTareas(contTarea10, contTareaFlecha10);
@@ -370,8 +395,11 @@ document.getElementById("tarea8Boton").onclick = function () {
 }
 
 const showImage17 = () => {
-  audio.play();
-  reproducirVideos(miVideo3, arrayVideos[2], contenedorVideo3, cerrarVideo3);
+  if (bandera12 == true){
+    audio.play();
+    reproducirVideos(miVideo3, arrayVideos[2], contenedorVideo3, cerrarVideo3);
+  }
+  bandera12 = false;
 };
 
 let semaforo4 = true;
@@ -452,9 +480,16 @@ const showImage19 = () => {
   containerEncriptados.style.display = "none";
 };
 // Esto muestra cuando se le da click a la herramienta de des
+
+let bandera13 = true;
+
 const showImage20 = () => {
   audio.play();
   contenedorEmsisoft.style.display = "flex";
+  if(bandera13 == true){  
+    reproducirVideos(miVideo5, arrayVideos[4], contenedorVideo5, cerrarVideo5);
+  }
+  bandera13 = false;
 };
 boton5.onmouseover = function () {
   boton5.classList.remove("boton5");
@@ -655,6 +690,7 @@ const botonClear = () => {
 const spanResults = document.getElementById("spanResults");
 const desencriptar = document.getElementById("desencriptar");
 const containerSaw = document.getElementById("containerSaw");
+const contenedorEncuesta1 = document.getElementById("contenedorEncuesta1");
 
 const contenedosUnicesmagPng = document.getElementById(
   "contenedosUnicesmagPng"
@@ -676,6 +712,13 @@ const ocultarUnicesmag = () => {
 const div10 = div.cloneNode();
 div10.textContent = "UniCesmag.png";
 div10.className = "desencriptarUnicesmagPng";
+
+const botonEncuesta = document.createElement("button");
+botonEncuesta.textContent = "Encuesta 1";
+botonEncuesta.className = "botonEncuesta";
+botonEncuesta.onclick = function () {
+  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScdvjH_NFHfaU27kFuDmMWhREv08tigGm60AohZ6UcAyUDzpQ/viewform";
+}
 
 let semaforo3 = true;
 
@@ -716,6 +759,8 @@ const botonDecrypt = () => {
         main5.style.backgroundColor = "#3a227d";
         cerrarTareas(contTarea6, contTareaFlecha6);
         cerrarTareas(contTarea7, contTarea9);
+        reproducirVideos(miVideo6, arrayVideos[5], contenedorVideo6, cerrarVideo6);
+        contenedorEncuesta1.appendChild(botonEncuesta);
       }
     }, 1500);
     semaforo3 = false;
@@ -738,7 +783,6 @@ function borrarTexto() {
 const contenedorPapelera = document.getElementById("contenedorPapelera");
 
 const showPapelera = () => {
-  audio.play();
   contenedorPapelera.style.display = "flex";
 };
 
@@ -794,3 +838,5 @@ document.getElementById("tarea5Boton").onclick = function () {
   const cerrarToast5 = document.getElementById("contTarea5");
   cerrarToast5.style.display = "none";
 };
+
+
