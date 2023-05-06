@@ -760,7 +760,6 @@ const botonDecrypt = () => {
         cerrarTareas(contTarea6, contTareaFlecha6);
         cerrarTareas(contTarea7, contTarea9);
         reproducirVideos(miVideo6, arrayVideos[5], contenedorVideo6, cerrarVideo6);
-        contenedorEncuesta1.appendChild(botonEncuesta);
       }
     }, 1500);
     semaforo3 = false;
