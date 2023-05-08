@@ -87,17 +87,40 @@
       <h1>Dirigase al boton para encender el PC</h1>
       <div class="box1">
         <div class="box2">
-          <img src="https://live.staticflickr.com/65535/52870986195_51ce8a6e5c_o.png" alt="" class="imgLibreria" />
-          <img src="https://live.staticflickr.com/65535/52870775909_79fcc28efa_o.png" alt="" class="imgPC" />
-          <img src="https://live.staticflickr.com/65535/52870606411_24f06dbce4_o.png" alt="" class="imgMesa" />
-          <img src="https://live.staticflickr.com/65535/52871042033_7f3a6ed1b3_o.png" alt="" id="imgMonitor" />
-          <img src="https://live.staticflickr.com/65535/52871047093_b3059a596e_o.png" alt="" class="imgSuperficie" />
+          <img
+            src="https://live.staticflickr.com/65535/52870986195_51ce8a6e5c_o.png"
+            alt=""
+            class="imgLibreria"
+          />
+          <img
+            src="https://live.staticflickr.com/65535/52870775909_79fcc28efa_o.png"
+            alt=""
+            class="imgPC"
+          />
+          <img
+            src="https://live.staticflickr.com/65535/52870606411_24f06dbce4_o.png"
+            alt=""
+            class="imgMesa"
+          />
+          <img
+            src="https://live.staticflickr.com/65535/52871042033_7f3a6ed1b3_o.png"
+            alt=""
+            id="imgMonitor"
+          />
+          <img
+            src="https://live.staticflickr.com/65535/52871047093_b3059a596e_o.png"
+            alt=""
+            class="imgSuperficie"
+          />
           <div id="imgFondoPrincipal"></div>
           <div id="imgFondo"></div>
           <div class="contenedorOpciones" id="contenedorOpciones">
             <h4 class="text-center letraUser">{{ user.username }}</h4>
             <a id="contenedorBotonIR" href="{% url 'ejecucionPC' %}"
-              ><img src="https://live.staticflickr.com/65535/52870616961_c70c6ff817_o.png" alt="" class="contenedorBotonIR"
+              ><img
+                src="https://live.staticflickr.com/65535/52870616961_c70c6ff817_o.png"
+                alt=""
+                class="contenedorBotonIR"
             /></a>
           </div>
         </div>
@@ -395,8 +418,99 @@
       </div>
     </div>
 
+    <!-- VALIDACION START-->
+    <div class="container-fluid py-5" style="background-color: rgb(25, 2, 94)">
+      <div class="container pt-5" style="padding-bottom: 50px">
+        <div class="row">
+          <div class="col-lg-6 text-white" style="min-height: 500px">
+            <div class="position-relative h-100">
+              <img
+                class="position-absolute w-100 h-100"
+                src="https://live.staticflickr.com/65535/52879458806_1866510786_o.jpg"
+                style="object-fit: cover"
+              />
+            </div>
+            Avalible en:
+            https://live.staticflickr.com/65535/52879458806_1866510786_o.jpg
+          </div>
+          <div class="col-lg-6 pt-5 pb-lg-5">
+            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+              <h6
+                class="text-primary text-uppercase"
+                style="letter-spacing: 5px"
+              >
+                VALIDACION METODOLOGÍA RANSOMWARE
+              </h6>
+              <h1 class="mb-3">
+                Tu colaboración es fundamental para validar nuestra metodologia
+              </h1>
+              <p>
+                Tu ayuda en la resolución de la siguiente encuenta es
+                fundamental para la finalidad de la metodología creada.
+              </p>
+              <div class="row mb-4">
+                <div class="col-6">
+                  <img class="img-fluid" src="img/about-1.jpg" alt="" />
+                </div>
+              </div>
+              <a href="{% url 'step1' %}" class="btn btn-primary mt-1"
+                >Encuesta Validación</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- VALIDACION END -->
+
+    <!-- EVALUACION START -->
+    <div
+      class="container-fluid py-5"
+      style="background-color: rgb(25, 2, 94); margin-top: 0.4px"
+    >
+      <div class="container pt-5" style="padding-bottom: 50px">
+        <div class="row">
+          <div class="col-lg-6 text-white" style="min-height: 500px">
+            <div class="position-relative h-100">
+              <img
+                class="position-absolute w-100 h-100"
+                src="https://live.staticflickr.com/65535/52879842230_c477a27fb2_o.png"
+                style="object-fit: cover"
+              />
+            </div>
+            Avalible en:
+            https://live.staticflickr.com/65535/52879842230_c477a27fb2_o.png
+          </div>
+          <div class="col-lg-6 pt-5 pb-lg-5">
+            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+              <h6
+                class="text-primary text-uppercase"
+                style="letter-spacing: 5px"
+              >
+                ENCUESTA FINAL EVALUACIÓN DE SATISFACIÓN
+              </h6>
+              <h1 class="mb-3">Queremos saber cuanto aprendiste</h1>
+              <p>
+                Dejanos saber cuanto aprendiste dentro de nuestro sitio sobre
+                seguridad informática.
+              </p>
+              <div class="row mb-4">
+                <div class="col-6">
+                  <img class="img-fluid" src="img/about-1.jpg" alt="" />
+                </div>
+              </div>
+              <a href="{% url 'step1' %}" class="btn btn-primary mt-1"
+                >Encuesta evaluación</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EVALUACION End -->
+
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50" style="margin-top: 90px">
+    <div class="container-fluid bg-dark text-white-50" style="margin-top: 0px">
       <div class="row pt-5">
         <div class="col-lg-3 col-md-6 mb-5">
           <a href="{% url 'step1' %}" class="navbar-brand">
