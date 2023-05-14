@@ -26,101 +26,23 @@
   color: blue;
 }
 
-
-.contenedorOpciones {
-  /* display: flex; */
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  width: 200px;
-  height: 160px;
-  border-radius: 10px;
-  background-color: #0d0c1a;
-  margin-left: 320px;
-  margin-top: 80px;
-  z-index: 3;
-}
-.letraUser {
-  margin-top: 8px;
-  color: white;
-  font-size: 14px;
-}
-.contenedorBotonIR {
-  width: 100px;
-  height: 100px;
-  margin-top: 8px;
-  margin-left: 50px;
-  cursor: pointer;
-}
-.box1 {
+/* contenedor del step */
+.containerImagenes {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-.box2 {
-  width: 700px;
-  height: 528px;
-  background: #1f1c2c;
-  background: -webkit-linear-gradient(to right, #928dab, #1f1c2c);
-  background: linear-gradient(to right, #928dab, #1f1c2c);
-  border-radius: 10px;
+
+.containerTexto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.imgMesa {
-  position: absolute;
-  z-index: 1;
-  margin-left: 14px;
-  margin-top: 22px;
+
+#imgPC1 {
+  cursor: pointer;
 }
-.imgPC {
-  position: absolute;
-  margin-left: 15px;
-  z-index: 2;
-  width: 300px;
-  height: 300px;
-}
-#imgMonitor {
-  position: absolute;
-  z-index: 2;
-  margin-left: 260px;
-  width: 320px;
-  height: 340px;
-}
-.imgSuperficie {
-  position: absolute;
-  width: 700px;
-  height: 190px;
-  background-color: #c47942;
-  margin-top: 338px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.imgLibreria {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  margin-left: 400px;
-}
-#imgFondo {
+#imgPC2 {
   display: none;
-  background: #005aa7;
-  background: -webkit-linear-gradient(to right, #fffde4, #005aa7);
-  background: linear-gradient(to right, #fffde4, #005aa7);
   cursor: pointer;
-  position: absolute;
-  margin-left: 270px;
-  margin-top: 72.5px;
-  width: 301px;
-  height: 180px;
-  z-index: 3;
-}
-#imgFondoPrincipal {
-  display: block;
-  cursor: pointer;
-  position: absolute;
-  margin-left: 270px;
-  margin-top: 72.5px;
-  width: 301px;
-  height: 180px;
-  z-index: 3;
 }

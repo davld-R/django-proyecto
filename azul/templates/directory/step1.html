@@ -84,48 +84,24 @@
     <!--
       !:  Programación del Body de la parte iterativa
     -->
-    <div class="container">
-      <h1>Dirigase al boton para encender el PC</h1>
-      <div class="box1">
-        <div class="box2">
-          <img
-            src="https://live.staticflickr.com/65535/52870986195_51ce8a6e5c_o.png"
-            alt=""
-            class="imgLibreria"
-          />
-          <img
-            src="https://live.staticflickr.com/65535/52870775909_79fcc28efa_o.png"
-            alt=""
-            class="imgPC"
-          />
-          <img
-            src="https://live.staticflickr.com/65535/52870606411_24f06dbce4_o.png"
-            alt=""
-            class="imgMesa"
-          />
-          <img
-            src="https://live.staticflickr.com/65535/52871042033_7f3a6ed1b3_o.png"
-            alt=""
-            id="imgMonitor"
-          />
-          <img
-            src="https://live.staticflickr.com/65535/52871047093_b3059a596e_o.png"
-            alt=""
-            class="imgSuperficie"
-          />
-          <div id="imgFondoPrincipal"></div>
-          <div id="imgFondo"></div>
-          <div class="contenedorOpciones" id="contenedorOpciones">
-            <h4 class="text-center letraUser">{{ user.username }}</h4>
-            <a id="contenedorBotonIR" href="{% url 'ejecucionPC' %}"
-              ><img
-                src="https://live.staticflickr.com/65535/52870616961_c70c6ff817_o.png"
-                alt=""
-                class="contenedorBotonIR"
-            /></a>
-          </div>
-        </div>
-      </div>
+    <div class="container containerTexto">
+      <h1>Click en la imagen para iniciar</h1>
+    </div>
+    <div class="container containerImagenes">
+      <img
+        src="https://live.staticflickr.com/65535/52896395285_7f337f685e_o.png"
+        alt=""
+        class="img-fluid"
+        id="imgPC1"
+      />
+      <a href="{% url 'ejecucionPC' %}">
+        <img
+          src="https://live.staticflickr.com/65535/52896048326_b2c810054a_o.png"
+          alt=""
+          class="img-fluid"
+          id="imgPC2"
+        />
+      </a>
     </div>
     <!--
     !-- En esta parte va el paso a paso pero documentado 
