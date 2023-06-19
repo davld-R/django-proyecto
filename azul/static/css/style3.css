@@ -46,3 +46,31 @@
   display: none;
   cursor: pointer;
 }
+
+
+.contenedor__titulo {
+  text-align: center;
+  font-family: monospace;
+}
+.contenedor__titulo__h4 {
+  font-family: monospace;
+  font-size: 18px;
+  text-align: justify;
+  margin-right: 10px;
+  box-shadow: 2px 2px 2px #CCC;
+}
+.contenedor__titulo__h4:hover {
+  box-shadow: 4px 4px 4px #CCC;
+  
+}
+
+.containerImagenes {
+  margin: 5px 0 0 20px;
+  box-shadow: 2px 2px 2px #CCC;
+}
+.containerImagenes:hover {
+  box-shadow: 4px 4px 4px #CCC;
+}
+
+
+
